@@ -5,11 +5,21 @@ using UnityEngine;
 public class StoryLineHandler : MonoBehaviour
 {
     public List<GameObject> Prefabs;
+    public int StartStep;
 
     List<GameObject> LivingGameObjects = new List<GameObject>();
 
     public void Awake(){
-        LaunchStep(0);
+        //Start the coroutine we define below named ExampleCoroutine.
+        StartCoroutine(SlightDelay());
+    }
+
+    IEnumerator SlightDelay()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(2);
+
+        LaunchStep(StartStep);
     }
 
     private void LaunchStep(int step){

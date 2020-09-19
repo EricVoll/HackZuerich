@@ -36,6 +36,9 @@ public class Ingredient
     public Name name { get; set; }
     public DateTime modified { get; set; }
     public List<int> family_ids { get; set; }
+
+    //custom ones
+    public bool IsActive {get; set;}
 }
 
 public class Tag
