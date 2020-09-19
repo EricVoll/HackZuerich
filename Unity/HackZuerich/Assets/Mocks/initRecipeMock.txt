@@ -1,0 +1,744 @@
+[
+    {
+        "language": "de",
+        "title": "Penne al Pesto mit Zucchetti",
+        "duration": 20,
+        "nutrients": {
+            "calories": 760,
+            "carbohydrates": 83,
+            "carbohydrates_percent": 42.9,
+            "fat": 34,
+            "fat_percent": 39.5,
+            "kilojoule": 3150,
+            "proteins": 34,
+            "proteins_percent": 17.6
+        },
+        "steps": [
+            "Penne in Salzwasser al dente kochen und abgiessen. Inzwischen Pinienkerne in einer beschichteten Pfanne ohne Fett rundum leicht r\u00f6sten. Zwiebel halbieren und in Streifen schneiden. Im \u00d6l d\u00fcnsten. Zucchetti durch die R\u00f6stiraffel dazureiben. Kurz mitbraten. Penne, Pesto und Pinienkerne dazumischen. Mozzarella durch die R\u00f6stiraffel dazureiben. Mit Salz und Blumenpfeffer abschmecken und sofort servieren."
+        ],
+        "ingredients": [
+            {
+                "id": 16963,
+                "synonyms": [],
+                "name": {
+                    "singular": "Mozzarella",
+                    "plural": "Mozzarellas"
+                },
+                "modified": "2020-02-12T21:06:50Z",
+                "family_ids": [
+                    14055713,
+                    14055815
+                ]
+            },
+            {
+                "id": 15049,
+                "synonyms": [
+                    "ungekochte, pastenartige Sosse"
+                ],
+                "name": {
+                    "singular": "Pesto",
+                    "plural": "Pesto"
+                },
+                "modified": "2019-10-01T15:39:45Z",
+                "family_ids": [
+                    14055857
+                ]
+            },
+            {
+                "id": 15119,
+                "synonyms": [
+                    "Oliven-\u00d6l"
+                ],
+                "name": {
+                    "singular": "Oliven\u00f6l",
+                    "plural": "Oliven\u00f6l"
+                },
+                "modified": "2019-10-01T14:16:09Z",
+                "family_ids": [
+                    14055835,
+                    14055837
+                ]
+            },
+            {
+                "id": 16316,
+                "synonyms": [
+                    "Zucchini",
+                    "Zuchetti",
+                    "Zuccetti",
+                    "Zuchini",
+                    "Zuccini",
+                    "Zuccheti"
+                ],
+                "name": {
+                    "singular": "Zucchetti",
+                    "plural": "Zucchetti"
+                },
+                "modified": "2019-10-04T14:29:20Z",
+                "family_ids": [
+                    14056120,
+                    14055593
+                ]
+            },
+            {
+                "id": 16319,
+                "synonyms": [
+                    "Zwiebellauch",
+                    "B\u00f6lle",
+                    "P\u00f6lle",
+                    "Zibele",
+                    "Zible",
+                    "Zwiibla"
+                ],
+                "name": {
+                    "singular": "Zwiebel",
+                    "plural": "Zwiebeln"
+                },
+                "modified": "2019-10-04T14:43:40Z",
+                "family_ids": [
+                    14056129,
+                    14055593
+                ]
+            },
+            {
+                "id": 16390,
+                "synonyms": [],
+                "name": {
+                    "singular": "Penne",
+                    "plural": "Penne"
+                },
+                "modified": "2019-10-01T15:39:21Z",
+                "family_ids": [
+                    14056058,
+                    14055853
+                ]
+            },
+            {
+                "id": 16447,
+                "synonyms": [
+                    "Pfeffer mit Blumenbl\u00fcten",
+                    "Bl\u00fctenpfefffer"
+                ],
+                "name": {
+                    "singular": "Blumenpfeffer",
+                    "plural": "Blumenpfeffer"
+                },
+                "modified": "2019-09-30T16:01:26Z",
+                "family_ids": [
+                    14055862
+                ]
+            },
+            {
+                "id": 16546,
+                "synonyms": [
+                    "Kochsalz",
+                    "Speisesalz"
+                ],
+                "name": {
+                    "singular": "Salz",
+                    "plural": "Salz"
+                },
+                "modified": "2019-10-04T09:00:38Z",
+                "family_ids": [
+                    14055959
+                ]
+            },
+            {
+                "id": 17095,
+                "synonyms": [
+                    "Pignole",
+                    "Pignolie"
+                ],
+                "name": {
+                    "singular": "Pinienkerne",
+                    "plural": "Pinienkerne"
+                },
+                "modified": "2019-10-01T16:11:01Z",
+                "family_ids": []
+            }
+        ],
+        "image": "https://recipeimages.migros.ch/large/67e49b634d512747d73edade41236d92fd52d042/penne-al-pesto-mit-zucchetti-0-4-3.jpg"
+    },
+    {
+        "language": "de",
+        "title": "Schoggitarte mit Erdbeeren",
+        "duration": 180,
+        "nutrients": {
+            "calories": 520,
+            "carbohydrates": 45,
+            "carbohydrates_percent": 35,
+            "fat": 34,
+            "fat_percent": 59.5,
+            "kilojoule": 2150,
+            "proteins": 7,
+            "proteins_percent": 5.4
+        },
+        "steps": [
+            "F\u00fcr den Kakaoteig Mehl, Salz, Kakaopulver und Rohrzucker in einer Sch\u00fcssel mischen. Butter in Flocken dazuschneiden. Alles zwischen den H\u00e4nden br\u00f6smelig reiben. Ei dazugeben. Alles rasch zu einem Teig zusammenf\u00fcgen. Teig in Klarsichtfolie verpackt mindestens 30 Minuten k\u00fchl stellen.",
+            "Backofen auf 180 \u00b0C vorheizen. Kuchenblech ausbuttern und mit Mehl best\u00e4uben. Teig auf wenig Mehl ca. 3 mm d\u00fcnn auswallen. Teig in das Blech legen. Teigboden mit einer Gabel dicht einstechen. Mit einem St\u00fcck Backpapier belegen und mit H\u00fclsenfr\u00fcchten beschweren. In der Ofenmitte ca. 15 Minuten blindbacken. Papier samt H\u00fclsenfr\u00fcchten entfernen. Boden weitere 5 Minuten fertig backen. Herausnehmen, ausk\u00fchlen lassen.",
+            "Schokolade und Butter im Wasserbad langsam schmelzen. Cr\u00e8me fra\u00eeche l\u00f6ffelweise mit dem Schwingbesen darunterr\u00fchren, salzen. Masse auf dem gut ausgek\u00fchlten Tarteboden verteilen. Ca. 10 Minuten k\u00fchl stellen. Erdbeeren achteln und mit der Schnittfl\u00e4che nach unten kreisf\u00f6rmig auf der Schokoladenmasse verteilen. Gelee erw\u00e4rmen, Erdbeeren damit bepinseln. Tarte ca. 1 Stunde k\u00fchl stellen."
+        ],
+        "ingredients": [
+            {
+                "id": 14483,
+                "synonyms": [],
+                "name": {
+                    "singular": "Erdbeere",
+                    "plural": "Erdbeeren"
+                },
+                "modified": "2019-09-30T16:50:03Z",
+                "family_ids": [
+                    14055528,
+                    14055423,
+                    14648563
+                ]
+            },
+            {
+                "id": 14708,
+                "synonyms": [],
+                "name": {
+                    "singular": "Kakaopulver",
+                    "plural": "Kakaopulver"
+                },
+                "modified": "2019-10-01T09:17:03Z",
+                "family_ids": []
+            },
+            {
+                "id": 16851,
+                "synonyms": [],
+                "name": {
+                    "singular": "Butter und Mehl",
+                    "plural": "Butter und Mehl"
+                },
+                "modified": "2019-09-30T16:15:04Z",
+                "family_ids": []
+            },
+            {
+                "id": 16850,
+                "synonyms": [
+                    "Anke"
+                ],
+                "name": {
+                    "singular": "Butter",
+                    "plural": "Butter"
+                },
+                "modified": "2019-09-30T16:10:55Z",
+                "family_ids": [
+                    14055468
+                ]
+            },
+            {
+                "id": 16865,
+                "synonyms": [
+                    "Creme fraiche",
+                    "Sauerrahm",
+                    "saurer Rahm",
+                    "saure Sahne",
+                    "saurer Halbrahm"
+                ],
+                "name": {
+                    "singular": "Cr\u00e8me fra\u00eeche",
+                    "plural": "Cr\u00e8me fra\u00eeche"
+                },
+                "modified": "2019-09-30T16:29:34Z",
+                "family_ids": [
+                    14055971,
+                    14055498
+                ]
+            },
+            {
+                "id": 14927,
+                "synonyms": [],
+                "name": {
+                    "singular": "Erdbeerguss f\u00fcr Torten",
+                    "plural": "Erdbeerguss f\u00fcr Torten"
+                },
+                "modified": "2019-09-30T16:50:28Z",
+                "family_ids": []
+            },
+            {
+                "id": 15084,
+                "synonyms": [],
+                "name": {
+                    "singular": "Ei",
+                    "plural": "Eier"
+                },
+                "modified": "2019-09-30T16:39:55Z",
+                "family_ids": [
+                    14055516
+                ]
+            },
+            {
+                "id": 16462,
+                "synonyms": [
+                    "Salzkristallflocken",
+                    "Flor de sal",
+                    "Salzblume"
+                ],
+                "name": {
+                    "singular": "Fleur de sel",
+                    "plural": "Fleur de sel"
+                },
+                "modified": "2020-06-19T08:35:50Z",
+                "family_ids": [
+                    14055959
+                ]
+            },
+            {
+                "id": 16379,
+                "synonyms": [],
+                "name": {
+                    "singular": "Mehl",
+                    "plural": "Mehl"
+                },
+                "modified": "2019-10-01T12:25:50Z",
+                "family_ids": [
+                    14055801
+                ]
+            },
+            {
+                "id": 16596,
+                "synonyms": [
+                    "Backbohnen"
+                ],
+                "name": {
+                    "singular": "H\u00fclsenfr\u00fcchte zum Blindbacken",
+                    "plural": "H\u00fclsenfr\u00fcchte zum Blindbacken"
+                },
+                "modified": "2019-10-01T09:03:00Z",
+                "family_ids": []
+            },
+            {
+                "id": 16546,
+                "synonyms": [
+                    "Kochsalz",
+                    "Speisesalz"
+                ],
+                "name": {
+                    "singular": "Salz",
+                    "plural": "Salz"
+                },
+                "modified": "2019-10-04T09:00:38Z",
+                "family_ids": [
+                    14055959
+                ]
+            },
+            {
+                "id": 17185,
+                "synonyms": [
+                    "dunkle Schoggi"
+                ],
+                "name": {
+                    "singular": "dunkle Schokolade",
+                    "plural": "dunkle Schokolade"
+                },
+                "modified": "2019-09-30T16:34:51Z",
+                "family_ids": [
+                    14055511,
+                    14055988
+                ]
+            },
+            {
+                "id": 17274,
+                "synonyms": [],
+                "name": {
+                    "singular": "Rohrzucker",
+                    "plural": "Rohrzucker"
+                },
+                "modified": "2019-10-02T13:31:30Z",
+                "family_ids": [
+                    14056121
+                ]
+            }
+        ],
+        "image": "https://recipeimages.migros.ch/large/e30e0f638cee5bc9cedc71aa05dc75637692a866/schoggitarte-mit-erdbeeren-0-4-3.jpg"
+    },
+    {
+        "language": "de",
+        "title": "Pastateig",
+        "duration": 40,
+        "nutrients": {
+            "calories": 360,
+            "carbohydrates": 53,
+            "carbohydrates_percent": 59.2,
+            "fat": 10,
+            "fat_percent": 25.1,
+            "kilojoule": 1500,
+            "proteins": 14,
+            "proteins_percent": 15.6
+        },
+        "steps": [
+            "Mehl und Salz in einer Sch\u00fcssel mischen. Eine Mulde formen. Eier und \u00d6l in die Mulde geben. Alles zu einem glatten, elastischen Teig kneten. Bei Bedarf wenig Wasser beigeben. Teig zu einer Kugel formen, in Klarsichtfolie einwickeln. Im K\u00fchlschrank ca. 30 Minuten ruhen lassen. Teig halbieren und etwas flachdr\u00fccken. Bis zur Stufe 5 durch die Pastamaschine drehen."
+        ],
+        "ingredients": [
+            {
+                "id": 15084,
+                "synonyms": [],
+                "name": {
+                    "singular": "Ei",
+                    "plural": "Eier"
+                },
+                "modified": "2019-09-30T16:39:55Z",
+                "family_ids": [
+                    14055516
+                ]
+            },
+            {
+                "id": 15119,
+                "synonyms": [
+                    "Oliven-\u00d6l"
+                ],
+                "name": {
+                    "singular": "Oliven\u00f6l",
+                    "plural": "Oliven\u00f6l"
+                },
+                "modified": "2019-10-01T14:16:09Z",
+                "family_ids": [
+                    14055835,
+                    14055837
+                ]
+            },
+            {
+                "id": 16379,
+                "synonyms": [],
+                "name": {
+                    "singular": "Mehl",
+                    "plural": "Mehl"
+                },
+                "modified": "2019-10-01T12:25:50Z",
+                "family_ids": [
+                    14055801
+                ]
+            },
+            {
+                "id": 16546,
+                "synonyms": [
+                    "Kochsalz",
+                    "Speisesalz"
+                ],
+                "name": {
+                    "singular": "Salz",
+                    "plural": "Salz"
+                },
+                "modified": "2019-10-04T09:00:38Z",
+                "family_ids": [
+                    14055959
+                ]
+            }
+        ],
+        "image": "https://recipeimages.migros.ch/large/a5954b819f1cda88a53253f35c41ab886c0a48b2/pastateig-0-4-3.jpg"
+    },
+    {
+        "language": "de",
+        "title": "Schokoladenkuchen mit Fruchtsalat",
+        "duration": 15,
+        "nutrients": {
+            "calories": 380,
+            "carbohydrates": 47,
+            "carbohydrates_percent": 53.4,
+            "fat": 16,
+            "fat_percent": 40.9,
+            "kilojoule": 1600,
+            "proteins": 5,
+            "proteins_percent": 5.7
+        },
+        "steps": [
+            "Beeren verlesen. Kiwi sch\u00e4len. \u00c4pfel r\u00fcsten, Kerngeh\u00e4use entfernen. Fr\u00fcchte in mundgerechte St\u00fccke schneiden. Mit Moscato mischen. Schokoladenkuchen in 4 St\u00fcck schneiden und zum Fruchtsalat servieren."
+        ],
+        "ingredients": [
+            {
+                "id": 14548,
+                "synonyms": [
+                    "Chinesische Stachelbeeren"
+                ],
+                "name": {
+                    "singular": "Kiwi",
+                    "plural": "Kiwis"
+                },
+                "modified": "2019-10-01T10:50:03Z",
+                "family_ids": [
+                    14055537,
+                    14648563
+                ]
+            },
+            {
+                "id": 14451,
+                "synonyms": [],
+                "name": {
+                    "singular": "Apfel",
+                    "plural": "\u00c4pfel"
+                },
+                "modified": "2019-09-30T15:41:03Z",
+                "family_ids": [
+                    14055395,
+                    14648563
+                ]
+            },
+            {
+                "id": 14463,
+                "synonyms": [],
+                "name": {
+                    "singular": "Beeren",
+                    "plural": "Beeren"
+                },
+                "modified": "2019-09-30T15:54:41Z",
+                "family_ids": [
+                    14648563,
+                    14055423
+                ]
+            },
+            {
+                "id": 15707,
+                "synonyms": [
+                    "Schoggikuchen",
+                    "Schoggichueche",
+                    "Schokokuchen"
+                ],
+                "name": {
+                    "singular": "Schokoladenkuchen",
+                    "plural": "Schokoladenkuchen"
+                },
+                "modified": "2019-10-04T09:39:30Z",
+                "family_ids": [
+                    14055749
+                ]
+            },
+            {
+                "id": 14851,
+                "synonyms": [
+                    "s\u00fcsser italienischer Weisswein"
+                ],
+                "name": {
+                    "singular": "Moscato d'asti",
+                    "plural": "Moscato d'asti"
+                },
+                "modified": "2019-10-01T12:52:19Z",
+                "family_ids": [
+                    14055979
+                ]
+            }
+        ],
+        "image": "https://recipeimages.migros.ch/large/5beb9ea428407a1a1b8c639a31328864576788f6/schokoladenkuchen-mit-fruchtsalat-0-4-3.jpg"
+    },
+    {
+        "language": "de",
+        "title": "Bunte Salat-Bowl",
+        "duration": 20,
+        "nutrients": {
+            "calories": 240,
+            "carbohydrates": 23,
+            "carbohydrates_percent": 40.5,
+            "fat": 11,
+            "fat_percent": 43.6,
+            "kilojoule": 1000,
+            "proteins": 9,
+            "proteins_percent": 15.9
+        },
+        "steps": [
+            "Ebly in Bouillon 8\u201310 Minuten knapp weich kochen. Restfl\u00fcssigkeit abgiessen. Ebly ausk\u00fchlen lassen. Maisk\u00f6rner vom Kolben schneiden. Mit Essig, \u00d6l und Sojasauce zu einer Sauce r\u00fchren. Petersilie hacken und beigeben.",
+            "Gem\u00fcse in feine Scheiben hobeln. Salat in mundgerechte St\u00fccke zupfen. Blattsalat, Gem\u00fcse und Ebly in Bowls anrichten. Eier halbieren. Pfirsich in Schnitze schneiden. Beides dazu anrichten. Rucola dar\u00fcber streuen. Alles mit Sauce betr\u00e4ufeln."
+        ],
+        "ingredients": [
+            {
+                "id": 16134,
+                "synonyms": [],
+                "name": {
+                    "singular": "gekochter Maiskolben",
+                    "plural": "gekochte Maiskolben"
+                },
+                "modified": "2019-09-30T18:02:50Z",
+                "family_ids": [
+                    14055778,
+                    14055780
+                ]
+            },
+            {
+                "id": 16145,
+                "synonyms": [],
+                "name": {
+                    "singular": "Gem\u00fcse",
+                    "plural": "Gem\u00fcse"
+                },
+                "modified": "2019-09-30T18:09:21Z",
+                "family_ids": [
+                    14055593
+                ]
+            },
+            {
+                "id": 16188,
+                "synonyms": [
+                    "R\u00f6mer-Salat",
+                    "r\u00f6mischer Salat",
+                    "Romana-Salat",
+                    "Lattuga",
+                    "Bindesalat",
+                    "Kochsalat",
+                    "Florentiner Salat"
+                ],
+                "name": {
+                    "singular": "Lattich",
+                    "plural": "Lattiche"
+                },
+                "modified": "2019-10-01T11:18:12Z",
+                "family_ids": [
+                    14055762,
+                    14055593
+                ]
+            },
+            {
+                "id": 16246,
+                "synonyms": [
+                    "Ruccola",
+                    "Rukola",
+                    "Rukkola",
+                    "Rauke",
+                    "Arugula"
+                ],
+                "name": {
+                    "singular": "Rucola",
+                    "plural": "Rucola"
+                },
+                "modified": "2019-10-02T14:51:46Z",
+                "family_ids": []
+            },
+            {
+                "id": 16086,
+                "synonyms": [],
+                "name": {
+                    "singular": "Blattsalat",
+                    "plural": "Blattsalate"
+                },
+                "modified": "2019-09-30T15:58:50Z",
+                "family_ids": [
+                    14055436
+                ]
+            },
+            {
+                "id": 16799,
+                "synonyms": [
+                    "Peterli",
+                    "Petersil",
+                    "Peterle",
+                    "Peterling",
+                    "Petergr\u00fcn",
+                    "Silk"
+                ],
+                "name": {
+                    "singular": "Petersilie",
+                    "plural": "Petersilie"
+                },
+                "modified": "2020-08-25T09:13:20Z",
+                "family_ids": [
+                    14055742,
+                    14055859
+                ]
+            },
+            {
+                "id": 14576,
+                "synonyms": [],
+                "name": {
+                    "singular": "Pfirsich",
+                    "plural": "Pfirsiche"
+                },
+                "modified": "2019-10-01T16:09:36Z",
+                "family_ids": [
+                    14056040,
+                    14055863,
+                    14648563
+                ]
+            },
+            {
+                "id": 15089,
+                "synonyms": [
+                    "gekochte Eier",
+                    "Fr\u00fchst\u00fccksei"
+                ],
+                "name": {
+                    "singular": "hart gekochtes Ei",
+                    "plural": "hart gekochte Eier"
+                },
+                "modified": "2019-10-01T08:47:01Z",
+                "family_ids": [
+                    14055516
+                ]
+            },
+            {
+                "id": 15117,
+                "synonyms": [
+                    "Speise\u00f6l"
+                ],
+                "name": {
+                    "singular": "\u00d6l",
+                    "plural": "\u00d6l"
+                },
+                "modified": "2019-10-01T14:05:36Z",
+                "family_ids": []
+            },
+            {
+                "id": 16343,
+                "synonyms": [
+                    "vorgegarter Hartweizen",
+                    "Sonnenweizen",
+                    "Zartweizen"
+                ],
+                "name": {
+                    "singular": "Ebly",
+                    "plural": "Ebly"
+                },
+                "modified": "2019-11-14T15:56:06Z",
+                "family_ids": [
+                    14056102
+                ]
+            },
+            {
+                "id": 17400,
+                "synonyms": [
+                    "Sojasosse",
+                    "Soyasauce",
+                    "Soyasosse"
+                ],
+                "name": {
+                    "singular": "Sojasauce",
+                    "plural": "Sojasauce"
+                },
+                "modified": "2019-10-04T09:49:49Z",
+                "family_ids": [
+                    14056025
+                ]
+            },
+            {
+                "id": 17302,
+                "synonyms": [
+                    "Balsamico bianco",
+                    "weisser Balsamico",
+                    "weisser Balasamessig",
+                    "weisser Balsamico-Essig",
+                    "weisser Balsam-Essig"
+                ],
+                "name": {
+                    "singular": "Aceto balsamico bianco",
+                    "plural": "Aceto balsamico bianco"
+                },
+                "modified": "2019-09-30T15:38:58Z",
+                "family_ids": [
+                    14055380
+                ]
+            },
+            {
+                "id": 17343,
+                "synonyms": [
+                    "Gem\u00fcsebr\u00fche"
+                ],
+                "name": {
+                    "singular": "Gem\u00fcsebouillon",
+                    "plural": "Gem\u00fcsebouillon"
+                },
+                "modified": "2019-09-30T18:12:05Z",
+                "family_ids": [
+                    14055447,
+                    14055595
+                ]
+            }
+        ],
+        "image": "https://recipeimages.migros.ch/large/e38b791a7df67a29b1766a9221bca14c99896d58/bunte-salat-bowl-0-4-3.jpg"
+    }
+]
