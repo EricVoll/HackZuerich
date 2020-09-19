@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3542915694696129887}
   - component: {fileID: 7654445571501271503}
   - component: {fileID: 2442162176496893373}
-  - component: {fileID: 2822286566589615200}
   - component: {fileID: 4032154796806661552}
   - component: {fileID: 1731920938183648882}
   m_Layer: 0
@@ -98,19 +97,6 @@ BoxCollider:
   m_Size: {x: 1, y: 0.99999994, z: 1}
   m_Center: {x: 0.00000004856583, y: 0, z: 3.0616168e-17}
 --- !u!114 &2442162176496893373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593022505599144903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTetherWhenManipulating: 1
---- !u!114 &2822286566589615200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1263,7 +1249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386086538335828632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1158, y: 0.0172, z: 0.0001424}
+  m_LocalPosition: {x: 0.0937, y: 0.0172, z: -0.0007}
   m_LocalScale: {x: 0.9139199, y: 0.9139199, z: 1.1424}
   m_Children:
   - {fileID: 1386086538032288226}
@@ -4408,7 +4394,6 @@ GameObject:
   - component: {fileID: 2194597918273492034}
   - component: {fileID: 156001873138203453}
   - component: {fileID: 7301325804729298239}
-  - component: {fileID: 8078964607352821472}
   - component: {fileID: 6975312348535186969}
   m_Layer: 0
   m_Name: CheckoutPrefab
@@ -4425,7 +4410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7220666492105225334}
   m_LocalRotation: {x: 0, y: 0.267827, z: 0, w: 0.96346706}
-  m_LocalPosition: {x: 0.383, y: 0.1702, z: 0.112}
+  m_LocalPosition: {x: 0.383, y: -0.04, z: 0.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2210787858410135853}
@@ -4674,23 +4659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CostLabel: {fileID: 521684910208194233}
---- !u!114 &8078964607352821472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7220666492105225334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1fea68463e4e84b86c395b654f950d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualizationObject: {fileID: 7220666492105225334}
-  interactableObject: {fileID: 0}
-  autoFollowAtDistance: 1
-  autoFollowDistance: 2
-  autoFollowTransformTarget: {fileID: 0}
 --- !u!114 &6975312348535186969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5271,7 +5239,7 @@ Transform:
   m_GameObject: {fileID: 8416957534101568237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.0065}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.84, y: 1.36, z: 1}
   m_Children:
   - {fileID: 3098260130484900663}
   - {fileID: 3674071451752801881}
