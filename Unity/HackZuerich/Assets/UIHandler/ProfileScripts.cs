@@ -5,10 +5,13 @@ using TMPro;
 
 public class ProfileScripts : MonoBehaviour
 {
+    public static ProfileScripts instance;
+
     // Start is called before the first frame update
     void Start()
     {
         LastPos = CamTransform.position;
+        instance = this;
     }
 
     public Transform CamTransform;
@@ -31,6 +34,10 @@ public class ProfileScripts : MonoBehaviour
         }
     }
 
-
     public TextMeshPro StepText;
+    public TextMeshPro CalText;
+
+    public void AddCal(int kcal){
+        CalText.text = (500 + kcal).ToString() + " kcal";
+    }
 }
