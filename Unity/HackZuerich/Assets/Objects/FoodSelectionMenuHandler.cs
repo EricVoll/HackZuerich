@@ -28,7 +28,6 @@ public class FoodSelectionMenuHandler : MonoBehaviour
     }
 
     private void ReportButtonPressed(string optionId){
-        Debug.Log("Button was pressed");
         DataBase.instance.ReportFoodSelection(optionId);
         this.GetComponent<StoryLineStep>().ReportStepFinished(1);
     }

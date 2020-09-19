@@ -22,13 +22,11 @@ public class FoodOptionHandler : MonoBehaviour
         meshRenderer.material = new Material(Shader.Find("Standard"));
         var texture = option.GetTexture();
         meshRenderer.material.SetTexture("_MainTex", texture);
-        Debug.Log("Set");
     }
 
 
 
     public void BtnPressed(){
-        Debug.Log("Buttonw as pressed");
         ReportPressed?.Invoke(option.id);
     }
 
