@@ -51,7 +51,7 @@ public class DataBase : MonoBehaviour
     private InitRecipe MockInitRecipe()
     {
         string json = initRecipeMockTextFile.text;
-        InitRecipe r = new InitRecipe() { MyArray = JsonConvert.DeserializeObject<List<MyArray>>(json) };
+        InitRecipe r = JsonConvert.DeserializeObject<InitRecipe>(json);
         return r;
     }
 
