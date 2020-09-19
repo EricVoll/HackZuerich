@@ -14,7 +14,7 @@ public class DataBase : MonoBehaviour
 
     public static DataBase instance;
 
-    public Recipe currentRecipe;
+    public List<Ingredient> currentRecipe;
     public System.Action RecipeReceived;
 
     public void ReportFoodSelection(string id){
@@ -24,10 +24,10 @@ public class DataBase : MonoBehaviour
     }
 
 
-    private Recipe MockRecipeImport(){
+    private List<Ingredient>  MockRecipeImport(){
         string json = recipeMockTextFile.text;
         Debug.Log("found json");
-        Recipe r = JsonConvert.DeserializeObject<Recipe>(CleanJson(json));
+        List<Ingredient> r = JsonConvert.DeserializeObject<List<Ingredient>>(CleanJson(json));
         if(r == null){
             Debug.Log("Recipe is null!");
         }

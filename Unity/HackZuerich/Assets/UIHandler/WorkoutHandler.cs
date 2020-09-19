@@ -15,7 +15,7 @@ public class WorkoutHandler : MonoBehaviour
     public GameObject WorkoutItemPrefab;
 
     private void LaunchItems(){
-        foreach(var ingredient in DataBase.instance.currentRecipe.data.ingredients){
+        foreach(var ingredient in DataBase.instance.currentRecipe){
             var item = Instantiate(WorkoutItemPrefab);
             item.GetComponent<WorkoutItem>().Setup(ingredient);
             item.transform.parent = this.transform;

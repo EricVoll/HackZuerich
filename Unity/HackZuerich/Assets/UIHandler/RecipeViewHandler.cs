@@ -22,23 +22,23 @@ public class RecipeViewHandler : MonoBehaviour
         }
         else
         {
-            recipe = DataBase.instance.currentRecipe;
+            ingredients = DataBase.instance.currentRecipe;
             ProcessRecipe();
         }
     }
 
     private void ReportRecipeReceived()
     {
-        recipe = DataBase.instance.currentRecipe;
+        ingredients = DataBase.instance.currentRecipe;
         ProcessRecipe();
     }
 
-    Recipe recipe;
+    List<Ingredient> ingredients;
 
     private void ProcessRecipe()
     {
         //Display all ingredients
-        foreach (var ingr in recipe.data.ingredients.Take(5))
+        foreach (var ingr in ingredients.Take(5))
         {
             GameObject ingredientGO = Instantiate(IngredientPrefab);
 

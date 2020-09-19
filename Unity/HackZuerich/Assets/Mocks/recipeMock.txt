@@ -1,181 +1,126 @@
-{
-    "data": {
-        "id": "71829",
-        "language": "de",
-        "title": "Zuckerhutsalat mit Kürbis",
-        "teasertext": "Kleine Herbstmahlzeit mit frischen Vitaminen: Zuckerhutsalat mit geriebenem Hokkaidokürbis, serviert mit einer süssen Honig-Senf-Vinaigrette.",
-        "slug": "zuckerhutsalat-mit-kuerbis",
-        "duration_total_in_minutes": 20,
-        "nutrients": {
-        "calories": 450,
-        "carbohydrates": 24,
-        "carbohydrates_percent": 22,
-        "fat": 36,
-        "fat_percent": 74.3,
-        "kilojoule": 1850,
-        "proteins": 4,
-        "proteins_percent": 3.7
-        },
-        "steps": [
-        {
-            "title": null,
-            "description": "Senf, Honig, Essig und Öl mischen. Mit Curry, Salz und Pfeffer würzen. Kürbis fein dazu reiben. Zuckerhut längs halbieren und in dünne Streifen schneiden. Dazumischen. Zuckerhutsalat mit Salz und Pfeffer abschmecken. Sofort servieren.",
-            "video": null,
-            "image": null
-        }
+[
+    {
+        "id": 16163,
+        "synonyms": [
+        "Hokkaidokurbis",
+        "Oranger Knirps"
         ],
-        "ingredients": [
-        {
-            "id": 16163,
-            "synonyms": [
-            "Hokkaidokurbis",
-            "Oranger Knirps"
-            ],
-            "name": {
-            "singular": "Hokkaidokürbis (Oranger Knirps)",
-            "plural": "Hokkaidokürbis (Oranger Knirps)"
-            },
-            "modified": "2019-10-01T08:55:03Z",
-            "family_ids": [
-            14055753,
-            14055593
-            ]
+        "name": {
+        "singular": "Hokkaidokï¿½rbis (Oranger Knirps)",
+        "plural": "Hokkaidokï¿½rbis (Oranger Knirps)"
         },
-        {
-            "id": 15126,
-            "synonyms": [],
-            "name": {
-            "singular": "Sonnenblumenöl",
-            "plural": "Sonnenblumenöl"
-            },
-            "modified": "2019-11-10T19:18:20Z",
-            "family_ids": [
-            14055835
-            ]
+        "modified": "2019-10-01T08:55:03Z",
+        "family_ids": [
+        14055753,
+        14055593
+        ]
+    },
+    {
+        "id": 15126,
+        "synonyms": [],
+        "name": {
+        "singular": "Sonnenblumenï¿½l",
+        "plural": "Sonnenblumenï¿½l"
         },
-        {
-            "id": 16524,
-            "synonyms": [
-            "mildes Currypulver",
-            "Curry mild"
-            ],
-            "name": {
-            "singular": "milder Curry",
-            "plural": "milder Curry"
-            },
-            "modified": "2019-10-01T12:44:34Z",
-            "family_ids": [
-            14055501
-            ]
-        },
-        {
-            "id": 16533,
-            "synonyms": [],
-            "name": {
-            "singular": "Pfeffer",
-            "plural": "Pfeffer"
-            },
-            "modified": "2019-10-01T15:56:34Z",
-            "family_ids": [
-            14055862
-            ]
-        },
-        {
-            "id": 16318,
-            "synonyms": [
-            "Fleischkraut"
-            ],
-            "name": {
-            "singular": "Zuckerhut",
-            "plural": "Zuckerhut"
-            },
-            "modified": "2019-10-04T14:38:15Z",
-            "family_ids": [
-            14055436,
-            14055593
-            ]
-        },
-        {
-            "id": 16546,
-            "synonyms": [
-            "Kochsalz",
-            "Speisesalz"
-            ],
-            "name": {
-            "singular": "Salz",
-            "plural": "Salz"
-            },
-            "modified": "2019-10-04T09:00:38Z",
-            "family_ids": [
-            14055959
-            ]
-        },
-        {
-            "id": 17416,
-            "synonyms": [],
-            "name": {
-            "singular": "Weissweinessig",
-            "plural": "Weissweinessig"
-            },
-            "modified": "2019-10-04T14:17:30Z",
-            "family_ids": [
-            14055531,
-            14056101
-            ]
-        },
-        {
-            "id": 17257,
-            "synonyms": [],
-            "name": {
-            "singular": "flüssiger Honig",
-            "plural": "flüssiger Honig"
-            },
-            "modified": "2019-09-30T17:09:50Z",
-            "family_ids": [
-            14055666
-            ]
-        },
-        {
-            "id": 17375,
-            "synonyms": [
-            "Senf mild"
-            ],
-            "name": {
-            "singular": "milder Senf",
-            "plural": "milder Senf"
-            },
-            "modified": "2019-10-01T12:46:00Z",
-            "family_ids": [
-            14056012
-            ]
-        }
+        "modified": "2019-11-10T19:18:20Z",
+        "family_ids": [
+        14055835
+        ]
+    },
+    {
+        "id": 16524,
+        "synonyms": [
+        "mildes Currypulver",
+        "Curry mild"
         ],
-        "tags": [
-        {
-            "name": "Laktosefrei",
-            "id": "root.lactose.",
-            "type": "allergy"
+        "name": {
+        "singular": "milder Curry",
+        "plural": "milder Curry"
         },
-        {
-            "name": "Gemüse",
-            "id": "root.234.",
-            "type": "contains"
+        "modified": "2019-10-01T12:44:34Z",
+        "family_ids": [
+        14055501
+        ]
+    },
+    {
+        "id": 16533,
+        "synonyms": [],
+        "name": {
+        "singular": "Pfeffer",
+        "plural": "Pfeffer"
         },
-        {
-            "name": "Salat",
-            "id": "249",
-            "type": "dish-types"
-        }
+        "modified": "2019-10-01T15:56:34Z",
+        "family_ids": [
+        14055862
+        ]
+    },
+    {
+        "id": 16318,
+        "synonyms": [
+        "Fleischkraut"
         ],
-        "canonical": {
-        "master": "migusto",
-        "url": "https://migusto.migros.ch/de/rezepte/zuckerhutsalat-mit-kuerbis",
-        "logo": {
-            "id": "430028",
-            "modification_date": "2017-05-12T19:05:47Z",
-            "hash": "94F53FB2D038A79947F168104A5449F826C33CD3",
-            "stack": "https://recipeimages.migros.ch/large/0dbb8d81c79584e5909d62711c4e200bce8bcebe/migusto.png"
-        }
-        }
+        "name": {
+        "singular": "Zuckerhut",
+        "plural": "Zuckerhut"
+        },
+        "modified": "2019-10-04T14:38:15Z",
+        "family_ids": [
+        14055436,
+        14055593
+        ]
+    },
+    {
+        "id": 16546,
+        "synonyms": [
+        "Kochsalz",
+        "Speisesalz"
+        ],
+        "name": {
+        "singular": "Salz",
+        "plural": "Salz"
+        },
+        "modified": "2019-10-04T09:00:38Z",
+        "family_ids": [
+        14055959
+        ]
+    },
+    {
+        "id": 17416,
+        "synonyms": [],
+        "name": {
+        "singular": "Weissweinessig",
+        "plural": "Weissweinessig"
+        },
+        "modified": "2019-10-04T14:17:30Z",
+        "family_ids": [
+        14055531,
+        14056101
+        ]
+    },
+    {
+        "id": 17257,
+        "synonyms": [],
+        "name": {
+        "singular": "flï¿½ssiger Honig",
+        "plural": "flï¿½ssiger Honig"
+        },
+        "modified": "2019-09-30T17:09:50Z",
+        "family_ids": [
+        14055666
+        ]
+    },
+    {
+        "id": 17375,
+        "synonyms": [
+        "Senf mild"
+        ],
+        "name": {
+        "singular": "milder Senf",
+        "plural": "milder Senf"
+        },
+        "modified": "2019-10-01T12:46:00Z",
+        "family_ids": [
+        14056012
+        ]
     }
-}
+]
