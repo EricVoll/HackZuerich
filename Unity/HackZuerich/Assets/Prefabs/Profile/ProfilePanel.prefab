@@ -4683,7 +4683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamTransform: {fileID: 0}
   StepText: {fileID: 4049879619289418261}
-  CalText: {fileID: 0}
+  CalText: {fileID: 2779970665424322297}
 --- !u!1 &4993916319015370077
 GameObject:
   m_ObjectHideFlags: 0

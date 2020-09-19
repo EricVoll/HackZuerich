@@ -42,6 +42,7 @@ public class Ingredient
     public double Cost {get;set;}
     public string ScoreHealth {get;set;}
     public int Rating {get;set;}
+    public int kcal {get;set;}
 }
 
 public class Tag

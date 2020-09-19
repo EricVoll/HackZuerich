@@ -29,7 +29,7 @@ public class ProfileScripts : MonoBehaviour
             totalDistance += delta;
             LastPos = CamTransform.position;
             counter = 0;
-            Debug.Log($"Updated distance: {totalDistance}");
+            //Debug.Log($"Updated distance: {totalDistance}");
             StepText.text = (1253 + (int)(totalDistance/0.7)).ToString();
         }
     }

@@ -10,6 +10,8 @@ public class WorkoutItem : MonoBehaviour
 
     }
 
+    public Ingredient ingredient;
+
     public Material[] materials;
 
     private float ScoreHealthToInt(string health){
@@ -41,6 +43,7 @@ public class WorkoutItem : MonoBehaviour
 
     public void Setup(Ingredient ingredient)
     {
+        this.ingredient = ingredient;
         Vector3 speed = new Vector3(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f)).normalized;
         speed = speed * ScoreHealthToInt(ingredient.ScoreHealth);
         this.GetComponent<Rigidbody>().velocity = speed;

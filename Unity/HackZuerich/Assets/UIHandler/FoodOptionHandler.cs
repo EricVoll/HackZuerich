@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System;
+using TMPro;
 public class FoodOptionHandler : MonoBehaviour
 {
     public MeshRenderer meshRenderer;
+    public TextMeshPro foodOptionNameText;
     public Action<string> ReportPressed;
     FoodOption option;
 
@@ -19,6 +21,8 @@ public class FoodOptionHandler : MonoBehaviour
         {
             Debug.LogError("MeshRenderer is null!");
         }
+
+        foodOptionNameText.text = option.name;
 /*
         meshRenderer.material = new Material(Shader.Find("Standard"));
         var texture = option.GetTexture();
