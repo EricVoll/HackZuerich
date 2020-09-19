@@ -47,6 +47,15 @@ public class InitialRecipeViewer : MonoBehaviour
             InstructionsText.text = "Schritt 1: " + initRecipe.steps[0];
         else
             InstructionsText.text = "No instructions";
+
+        TextMeshes[0].text = initRecipe.nutrients.calories.ToString();
+        TextMeshes[1].text = initRecipe.nutrients.carbohydrates.ToString();
+        TextMeshes[2].text = initRecipe.nutrients.carbohydrates_percent + " %";
+        TextMeshes[3].text = initRecipe.nutrients.fat.ToString();
+        TextMeshes[4].text = initRecipe.nutrients.fat_percent +  " %";
+        TextMeshes[5].text = initRecipe.nutrients.kilojoule + " kJ";
+        TextMeshes[6].text = initRecipe.nutrients.proteins.ToString();
+        TextMeshes[7].text = initRecipe.nutrients.proteins_percent +" %";
     }
 
     Dictionary<string, string> languageMap = new Dictionary<string, string>(){
@@ -124,6 +133,20 @@ public class InitialRecipeViewer : MonoBehaviour
         InstructionsText.text = $"Step {currentIndex+1}: {initRecipe.steps[currentIndex]}";
     }
 
+    #endregion
+
+    #region Nutrients
+    bool NutrientsActive = false;
+    public void ReportNutrientsClicked(){
+        NutrientsActive = !NutrientsActive;
+        NutrientsPanel.SetActive(NutrientsActive);
+    }
+    public GameObject NutrientsPanel;
+
+    public TextMeshPro[] TextMeshes;
+
+
+        
     #endregion
 
 }
