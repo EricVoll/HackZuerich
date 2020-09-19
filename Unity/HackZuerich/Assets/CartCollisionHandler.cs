@@ -23,11 +23,16 @@ public class CartCollisionHandler : MonoBehaviour
     public WorkoutHandler parentWorkoutHandler;
 
     void OnCollisionEnter(Collision collisionData){
+
+        Debug.Log("Col!" + Time.realtimeSinceStartup);
+        
+
+        if(collisionData.gameObject.tag == "InvisibleBound") return;
+
         var item = collisionData.gameObject.GetComponent<WorkoutItem>();
         var ingr = item.ingredient;
-        Debug.Log("Col!" + Time.realtimeSinceStartup);
         parentWorkoutHandler.ReportIngredientCollected(ingr);
-        
+        Debug.Log("Still here");
         //Disabled collider for 3 seconds
         this.GetComponent<BoxCollider>().enabled = false;
         disabled = true;

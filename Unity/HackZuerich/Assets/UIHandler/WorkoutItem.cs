@@ -45,8 +45,12 @@ public class WorkoutItem : MonoBehaviour
     {
         this.ingredient = ingredient;
         Vector3 speed = new Vector3(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f)).normalized;
+        if(ingredient.ScoreHealth == null){
+            ingredient.ScoreHealth = "A";
+        }
         speed = speed * ScoreHealthToInt(ingredient.ScoreHealth);
         this.GetComponent<Rigidbody>().velocity = speed;
+        Debug.Log(ingredient.ScoreHealth);
         this.GetComponent<MeshRenderer>().material = materials[dict[ingredient.ScoreHealth]];
     }
 

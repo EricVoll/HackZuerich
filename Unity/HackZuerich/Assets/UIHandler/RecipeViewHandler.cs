@@ -46,7 +46,7 @@ public class RecipeViewHandler : MonoBehaviour
             if (ingr.Cost == 0)
                 ingr.Cost = Random.Range(0.5f, 50f);
 
-            ingr.ScoreHealth = new string[] { "F", "E", "D", "C", "B", "A" }[Random.Range(0, 5)];
+            ingr.ScoreHealth = new string[] { "F", "E", "D", "C", "B", "A" }[Random.Range(0, 6)];
             ingr.Rating = Random.Range(0, 6);
             
             ingredientGO.GetComponent<IngredientHandler>().SetIngredient(ingr);
