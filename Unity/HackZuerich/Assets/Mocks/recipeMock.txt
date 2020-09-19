@@ -1,126 +1,156 @@
 [
     {
-        "id": 16163,
-        "synonyms": [
-        "Hokkaidokurbis",
-        "Oranger Knirps"
+        "id": "200624200000",
+        "name": "Alfredo Pi\u00f9 Mozzarella Kugel",
+        "gtins": "7613404290859",
+        "image": "https://image.migros.ch/original/6663ba66bc7c87909fa9fe816089c923ffde1e7c/alfredo-piu-mozzarella-kugel.png",
+        "ratings": 5,
+        "price": 2.1,
+        "origin": "Switzerland",
+        "weight": 0.15,
+        "nutrient_levels": {},
+        "allergens": [],
+        "health_score": "C",
+        "ingredient_id": 16963
+    },
+    {
+        "id": "153225800000",
+        "name": "Agnesi Pesto alla Genovese",
+        "gtins": "80525448",
+        "image": "https://image.migros.ch/original/5e6d8d8a9f2f12880b3d5f1f7ba8606cd14db6a4/agnesi-pesto-alla-genovese.png",
+        "ratings": 3.666666666667,
+        "price": 3.4,
+        "origin": "Switzerland",
+        "weight": 0.185,
+        "nutrient_levels": {
+            "saturated_fat": "high",
+            "sugars": "low",
+            "fat": "high",
+            "salt": "high"
+        },
+        "allergens": [
+            "en:milk",
+            "en:nuts"
         ],
-        "name": {
-        "singular": "Hokkaidok�rbis (Oranger Knirps)",
-        "plural": "Hokkaidok�rbis (Oranger Knirps)"
-        },
-        "modified": "2019-10-01T08:55:03Z",
-        "family_ids": [
-        14055753,
-        14055593
-        ]
-    },
-    {
-        "id": 15126,
-        "synonyms": [],
-        "name": {
-        "singular": "Sonnenblumen�l",
-        "plural": "Sonnenblumen�l"
-        },
-        "modified": "2019-11-10T19:18:20Z",
-        "family_ids": [
-        14055835
-        ]
-    },
-    {
-        "id": 16524,
-        "synonyms": [
-        "mildes Currypulver",
-        "Curry mild"
+        "health_score": "E",
+        "additives": [
+            "en:e270",
+            "en:e300"
         ],
-        "name": {
-        "singular": "milder Curry",
-        "plural": "milder Curry"
-        },
-        "modified": "2019-10-01T12:44:34Z",
-        "family_ids": [
-        14055501
-        ]
+        "ingredient_id": 15049
     },
     {
-        "id": 16533,
-        "synonyms": [],
-        "name": {
-        "singular": "Pfeffer",
-        "plural": "Pfeffer"
+        "id": "103302600000",
+        "name": "M-Budget Oliven\u00f6l Vergine",
+        "gtins": "7613312186220",
+        "brand": "https://image.migros.ch/original/1d1a13e240a94a7e1fa8ef99f15ce5b896f3486b/m-budget.jpg",
+        "image": "https://image.migros.ch/original/19bcf8d9be1e005efa288fb87210284d2767e5ff/m-budget-olivenoel-vergine.png",
+        "ratings": 4.222222222222,
+        "price": 4.1,
+        "origin": "Switzerland",
+        "weight": 0.92,
+        "nutrient_levels": {
+            "fat": "high",
+            "sugars": "low",
+            "salt": "low",
+            "saturated_fat": "high"
         },
-        "modified": "2019-10-01T15:56:34Z",
-        "family_ids": [
-        14055862
-        ]
+        "allergens": [],
+        "health_score": "C",
+        "additives": [],
+        "ingredient_id": 15119
     },
     {
-        "id": 16318,
-        "synonyms": [
-        "Fleischkraut"
-        ],
-        "name": {
-        "singular": "Zuckerhut",
-        "plural": "Zuckerhut"
-        },
-        "modified": "2019-10-04T14:38:15Z",
-        "family_ids": [
-        14055436,
-        14055593
-        ]
+        "id": "273704901000",
+        "name": "Zucchetti",
+        "gtins": "2124068000005",
+        "brand": "https://image.migros.ch/original/d169433eae86571fe4796efc52300f787084eaa4/fresca-S10.jpg",
+        "image": "https://image.migros.ch/original/84f82c9d968ead19775aa6612fd14dc3af70137b/zucchetti.png",
+        "ratings": 4.304347826087,
+        "price": 1.4,
+        "origin": "Switzerland",
+        "weight": 1,
+        "nutrient_levels": {},
+        "allergens": [],
+        "health_score": "C",
+        "ingredient_id": 16316
     },
     {
-        "id": 16546,
-        "synonyms": [
-        "Kochsalz",
-        "Speisesalz"
-        ],
-        "name": {
-        "singular": "Salz",
-        "plural": "Salz"
-        },
-        "modified": "2019-10-04T09:00:38Z",
-        "family_ids": [
-        14055959
-        ]
+        "id": "277107901000",
+        "name": "Zwiebeln",
+        "gtins": "2124453000009",
+        "brand": "https://image.migros.ch/original/d169433eae86571fe4796efc52300f787084eaa4/fresca-S10.jpg",
+        "image": "https://image.migros.ch/original/a58e4173cf7ab43b0d9769cc30c2ea1ce0aa0ac5/zwiebeln.png",
+        "ratings": 4.333333333333,
+        "price": 1.5,
+        "origin": "Switzerland",
+        "weight": 1,
+        "nutrient_levels": {},
+        "allergens": [],
+        "health_score": "E",
+        "ingredient_id": 16319
     },
     {
-        "id": 17416,
-        "synonyms": [],
-        "name": {
-        "singular": "Weissweinessig",
-        "plural": "Weissweinessig"
-        },
-        "modified": "2019-10-04T14:17:30Z",
-        "family_ids": [
-        14055531,
-        14056101
-        ]
+        "id": "104063100000",
+        "name": "M-Classic Penne",
+        "gtins": "7613312314722",
+        "brand": "https://image.migros.ch/original/72c18633f911e026e081ac11d872cff2d8dc8abb/m-classic.jpg",
+        "image": "https://image.migros.ch/original/c10756104d679f30e1bbb097999d2cc0dc8d9d81/m-classic-penne.png",
+        "ratings": 4,
+        "price": 1.8,
+        "origin": "Switzerland",
+        "weight": 0.5,
+        "nutrient_levels": {},
+        "allergens": [],
+        "health_score": "D",
+        "ingredient_id": 16390
     },
     {
-        "id": 17257,
-        "synonyms": [],
-        "name": {
-        "singular": "flüssiger Honig",
-        "plural": "flüssiger Honig"
-        },
-        "modified": "2019-09-30T17:09:50Z",
-        "family_ids": [
-        14055666
-        ]
+        "id": "106257000000",
+        "name": "S\u00e9lection Blumenpfeffer",
+        "gtins": "7617014123828",
+        "brand": "https://image.migros.ch/original/04f877657368f73f8ee8973aab7fd0cdfb8e2cd1/selection.jpg",
+        "image": "https://image.migros.ch/original/b161bb30ac68de368df5a59a2ed65cdc6e8d2289/selection-blumenpfeffer.png",
+        "ratings": 4.5,
+        "price": 5,
+        "origin": "Switzerland",
+        "weight": 0.035,
+        "nutrient_levels": {},
+        "allergens": [],
+        "health_score": "C",
+        "ingredient_id": 16447
     },
     {
-        "id": 17375,
-        "synonyms": [
-        "Senf mild"
-        ],
-        "name": {
-        "singular": "milder Senf",
-        "plural": "milder Senf"
+        "id": "106223300000",
+        "name": "JuraSel Speisesalz mit Jod und Fluor",
+        "gtins": "7610039000020",
+        "image": "https://image.migros.ch/original/ceaca6984f95226c5747601ac5e625b396833085/jurasel-speisesalz-mit-jod-und-fluor.png",
+        "ratings": 3.736842105263,
+        "price": 0.95,
+        "origin": "Switzerland",
+        "weight": 1,
+        "nutrient_levels": {
+            "saturated_fat": "low",
+            "salt": "low",
+            "fat": "low",
+            "sugars": "low"
         },
-        "modified": "2019-10-01T12:46:00Z",
-        "family_ids": [
-        14056012
-        ]
+        "allergens": [],
+        "health_score": "B",
+        "ingredient_id": 16546
+    },
+    {
+        "id": "105353000000",
+        "name": "Bio Pinienkerne",
+        "gtins": "7613312289532",
+        "image": "https://image.migros.ch/original/f318fb8fe52e5c6f7098e88bb6b8256a56bd0bab/bio-pinienkerne.png",
+        "ratings": 5,
+        "price": 7.1,
+        "origin": "Switzerland",
+        "weight": 0.075,
+        "nutrient_levels": {},
+        "allergens": [],
+        "health_score": "E",
+        "ingredient_id": 17095
     }
 ]

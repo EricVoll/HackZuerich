@@ -16,15 +16,19 @@ public class IngredientHandler : MonoBehaviour
     public void SetIngredient(Ingredient ingredient)
     {
         this.ingredient = ingredient;
-        textMeshPro.text = ingredient.name.singular;
+        textMeshPro.text = ingredient.name;
         SetState(true);
         SetGrade(ingredient.ScoreHealth);
         SetRating(ingredient.Rating);
         SetCost(ingredient.Cost);
         StartCoroutine(SetImage());
-
-        SetBio(true);
-        SetSwissNet(false);
+        if(!String.IsNullOrEmpty(ingredient.brand)){
+            BrandRenderer.gameObject.SetActive(true);
+            StartCoroutine(SetBrand());
+        }
+        else{
+            BrandRenderer.gameObject.SetActive(false);
+        }
     }
 
     private Ingredient ingredient;
@@ -100,22 +104,41 @@ public class IngredientHandler : MonoBehaviour
             yield return www;
 
             float factor = (float)www.texture.width/www.texture.height;
-            Debug.Log(factor);
+            float factory = 1f;
+            
+            if(factor > 1){
+                factory = 1/factor;
+                factor = 1f;
+            }
             ImageRenderer.gameObject.transform.localScale = new Vector3(
                 ImageRenderer.gameObject.transform.localScale.x * factor, 
-                ImageRenderer.gameObject.transform.localScale.y, 
+                ImageRenderer.gameObject.transform.localScale.y * factory, 
                 ImageRenderer.gameObject.transform.localScale.z);
             // assign texture
             ImageRenderer.material.mainTexture = www.texture;
         }
     }
 
-    public GameObject BioIcon;
-    public GameObject SwissNessIcon;
-    private void SetBio(bool state){
-        BioIcon.SetActive(state);
-    }
-    private void SetSwissNet(bool state){
-        SwissNessIcon.SetActive(state);
+    public MeshRenderer BrandRenderer;
+
+    IEnumerator SetBrand(){
+        using (WWW www = new WWW(ingredient.brand)){
+            // Wait for download to complete
+            yield return www;
+
+            float factor = (float)www.texture.width/www.texture.height;
+            float factory = 1f;
+            
+            if(factor > 1){
+                factory = 1/factor;
+                factor = 1f;
+            }
+            BrandRenderer.gameObject.transform.localScale = new Vector3(
+                BrandRenderer.gameObject.transform.localScale.x * factor, 
+                BrandRenderer.gameObject.transform.localScale.y * factory, 
+                BrandRenderer.gameObject.transform.localScale.z);
+            // assign texture
+            BrandRenderer.material.mainTexture = www.texture;
+        }
     }
 }

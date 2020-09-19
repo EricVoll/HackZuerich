@@ -16,7 +16,7 @@ public class WorkoutHandler : MonoBehaviour
 
     private void LaunchItems(){
         foreach(var ingredient in DataBase.instance.currentRecipe){
-            var item = GetModel(ingredient.name.singular);
+            var item = GetModel(ingredient.name);
             item.GetComponent<WorkoutItem>().Setup(ingredient);
             item.transform.parent = this.transform;
         }
@@ -52,12 +52,12 @@ public class WorkoutHandler : MonoBehaviour
     List<Ingredient> collectedIngredients = new List<Ingredient>();
 
     public void ReportIngredientCollected(Ingredient ingredient){
-        if(collectedIngredients.Any(x => x.name.singular == ingredient.name.singular)){
+        if(collectedIngredients.Any(x => x.name == ingredient.name)){
             return;
         }
 
         collectedIngredients.Add(ingredient);
-        Debug.Log($"Ingredient {ingredient.name.singular} collected");
+        Debug.Log($"Ingredient {ingredient.name} collected");
 
         Vector3 scale = progressBar.localScale;
         scale.x = (float)collectedIngredients.Count / maxNr;

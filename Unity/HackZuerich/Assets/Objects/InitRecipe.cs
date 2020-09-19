@@ -23,7 +23,6 @@ public class InitRecipe
     public int duration { get; set; }
     public Nutrients nutrients { get; set; }
     public List<string> steps { get; set; }
-    public List<Ingredient> ingredients { get; set; }
     public string image { get; set; }
 }
 
