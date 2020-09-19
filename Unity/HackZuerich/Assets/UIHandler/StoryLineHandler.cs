@@ -20,32 +20,36 @@ public class StoryLineHandler : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(2);
 
-        LaunchStep(StartStep);
+        LaunchStep(new[] { StartStep });
     }
 
-    private void LaunchStep(int step)
+    private void LaunchStep(int[] steps)
     {
         for (int i = LivingGameObjects.Count - 1; i >= 0; i--)
         {
             GameObject.Destroy(LivingGameObjects[i]);
         }
 
-        if (Prefabs.Count > step)
+        foreach (var step in steps)
         {
-            GameObject newGameObject = Instantiate(Prefabs[step]);
-            LivingGameObjects.Add(newGameObject);
-            if (newGameObject != null)
+            if (Prefabs.Count > step)
             {
-                newGameObject.GetComponent<StoryLineStep>().SetCallBack(LaunchStep);
+                GameObject newGameObject = Instantiate(Prefabs[step]);
+                LivingGameObjects.Add(newGameObject);
+                if (newGameObject != null)
+                {
+                    newGameObject.GetComponent<StoryLineStep>().SetCallBack(LaunchStep);
+                }
+                else
+                {
+                    Debug.LogError($"Instantiating new step with id {step} failed. Prefab instantiated was null");
+                }
             }
             else
             {
-                Debug.LogError($"Instantiating new step with id {step} failed. Prefab instantiated was null");
+                Debug.LogError("Requested Step was too high. Index out of range");
             }
         }
-        else
-        {
-            Debug.LogError("Requested Step was too high. Index out of range");
-        }
     }
+
 }

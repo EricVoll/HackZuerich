@@ -15,6 +15,7 @@ public class IngredientHandler : MonoBehaviour
 
     public void SetIngredient(Ingredient ingredient)
     {
+        this.ingredient = ingredient;
         textMeshPro.text = ingredient.name.singular;
         SetState(true);
         SetGrade(ingredient.ScoreHealth, nrType.Health);
@@ -27,6 +28,7 @@ public class IngredientHandler : MonoBehaviour
     public void IngreadientCheckBoxClicked()
     {
         ingredient.IsActive = !ingredient.IsActive;
+        CheckoutHandler.instance.AddItem(ingredient);
     }
 
     public void SetState(bool state)

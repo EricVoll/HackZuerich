@@ -8,17 +8,19 @@ public class FoodSelectionMenuHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public GameObject FoodOptionButtonPrefab;
     public GameObject FoodOptionsContainer;
-    
-    void Awake(){
+
+    void Awake()
+    {
         //Replace this with Rest Call later
         Options = GetMockList();
 
-        foreach(var opt in Options){
+        foreach (var opt in Options)
+        {
             GameObject btn = GameObject.Instantiate(FoodOptionButtonPrefab);
             btn.transform.parent = FoodOptionsContainer.transform;
             btn.GetComponent<FoodOptionHandler>().SetFoodOption(opt, ReportButtonPressed);
@@ -27,14 +29,16 @@ public class FoodSelectionMenuHandler : MonoBehaviour
         FoodOptionsContainer.GetComponent<Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection>().UpdateCollection();
     }
 
-    private void ReportButtonPressed(string optionId){
+    private void ReportButtonPressed(string optionId)
+    {
         DataBase.instance.ReportFoodSelection(optionId);
-        this.GetComponent<StoryLineStep>().ReportStepFinished(1);
+        this.GetComponent<StoryLineStep>().ReportStepFinished(new[] { 1, 2 });
     }
 
     public List<FoodOption> Options = new List<FoodOption>();
 
-    private List<FoodOption> GetMockList(){
+    private List<FoodOption> GetMockList()
+    {
         List<FoodOption> options = new List<FoodOption>(){
             new FoodOption(){id = "SomeFood0"},
             new FoodOption(){id = "SomeFood1"},

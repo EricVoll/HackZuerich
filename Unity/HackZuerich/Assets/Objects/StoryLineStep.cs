@@ -4,13 +4,13 @@ using UnityEngine;
 using System;
 public class StoryLineStep : MonoBehaviour
 {
-    private Action<int> StepFinishedCallBack;
+    private Action<int[]> StepFinishedCallBack;
     
-    public void SetCallBack(Action<int> callback){
+    public void SetCallBack(Action<int[]> callback){
         StepFinishedCallBack = callback;
     }
 
-    public void ReportStepFinished(int nextId){
-        StepFinishedCallBack?.Invoke(nextId);
+    public void ReportStepFinished(int[] nextIds){
+        StepFinishedCallBack?.Invoke(nextIds);
     }
 }
