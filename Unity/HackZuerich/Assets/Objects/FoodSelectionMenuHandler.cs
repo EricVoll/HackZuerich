@@ -20,7 +20,7 @@ public class FoodSelectionMenuHandler : MonoBehaviour
         foreach(var opt in Options){
             GameObject btn = GameObject.Instantiate(FoodOptionButtonPrefab);
             btn.transform.parent = FoodOptionsContainer.transform;
-            //btn.GetComponent<FoodOptionHandler>().SetFoodOption(opt);
+            btn.GetComponent<FoodOptionHandler>().SetFoodOption(opt);
         }
 
         FoodOptionsContainer.GetComponent<Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection>().UpdateCollection();
