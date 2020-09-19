@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 5608515125504285674}
   - component: {fileID: 2952100735874211110}
   - component: {fileID: 3117087069577003767}
+  - component: {fileID: 6501205127347639932}
   m_Layer: 0
   m_Name: RecipeViewPrefab
   m_TagString: Untagged
@@ -601,6 +602,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681d7daf048d926499093fdbf020203b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6501205127347639932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952100735874211111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostTransform: {fileID: 1904344274694414010}
+  manipulationType: 3
+  twoHandedManipulationType: 7
+  allowFarManipulation: 1
+  oneHandRotationModeNear: 1
+  oneHandRotationModeFar: 1
+  releaseBehavior: 3
+  smoothingActive: 1
+  moveLerpTime: 0.001
+  rotateLerpTime: 0.001
+  scaleLerpTime: 0.001
+  onManipulationStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onManipulationEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3121042903318574540
 GameObject:
   m_ObjectHideFlags: 0
