@@ -39,6 +39,9 @@ public class Ingredient
 
     //custom ones
     public bool IsActive {get; set;}
+    public double Cost {get;set;}
+    public string ScoreHealth {get;set;}
+    public string ScoreCarbon {get;set;}
 }
 
 public class Tag

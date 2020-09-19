@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 4663408847476919570}
   - component: {fileID: 5608515125504285674}
   - component: {fileID: 2952100735874211110}
+  - component: {fileID: 3117087069577003767}
   m_Layer: 0
   m_Name: RecipeViewPrefab
   m_TagString: Untagged
@@ -588,6 +589,18 @@ MonoBehaviour:
   IngredientPrefab: {fileID: 504689953968105093, guid: 423ff4098dd503f4891758745bdb15e6,
     type: 3}
   IngredientsContainer: {fileID: 4855730852187696401}
+--- !u!114 &3117087069577003767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952100735874211111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681d7daf048d926499093fdbf020203b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3121042903318574540
 GameObject:
   m_ObjectHideFlags: 0

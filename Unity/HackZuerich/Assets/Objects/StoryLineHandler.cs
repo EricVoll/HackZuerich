@@ -9,7 +9,8 @@ public class StoryLineHandler : MonoBehaviour
 
     List<GameObject> LivingGameObjects = new List<GameObject>();
 
-    public void Awake(){
+    public void Awake()
+    {
         //Start the coroutine we define below named ExampleCoroutine.
         StartCoroutine(SlightDelay());
     }
@@ -22,18 +23,28 @@ public class StoryLineHandler : MonoBehaviour
         LaunchStep(StartStep);
     }
 
-    private void LaunchStep(int step){
-        for (int i = LivingGameObjects.Count - 1; i >= 0 ; i--)
+    private void LaunchStep(int step)
+    {
+        for (int i = LivingGameObjects.Count - 1; i >= 0; i--)
         {
             GameObject.Destroy(LivingGameObjects[i]);
         }
 
-        if(Prefabs.Count > step){
+        if (Prefabs.Count > step)
+        {
             GameObject newGameObject = Instantiate(Prefabs[step]);
             LivingGameObjects.Add(newGameObject);
-            newGameObject.GetComponent<StoryLineStep>().SetCallBack(LaunchStep);
+            if (newGameObject != null)
+            {
+                newGameObject.GetComponent<StoryLineStep>().SetCallBack(LaunchStep);
+            }
+            else
+            {
+                Debug.LogError($"Instantiating new step with id {step} failed. Prefab instantiated was null");
+            }
         }
-        else{
+        else
+        {
             Debug.LogError("Requested Step was too high. Index out of range");
         }
     }

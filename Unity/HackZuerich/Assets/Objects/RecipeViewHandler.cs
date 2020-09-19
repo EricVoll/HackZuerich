@@ -16,28 +16,39 @@ public class RecipeViewHandler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if(DataBase.instance.currentRecipe == null){
+        if (DataBase.instance.currentRecipe == null)
+        {
             DataBase.instance.RecipeReceived = ReportRecipeReceived;
         }
-        else{
-            Debug.Log("Loaded recipe");
+        else
+        {
             recipe = DataBase.instance.currentRecipe;
             ProcessRecipe();
         }
     }
 
-    private void ReportRecipeReceived(){
+    private void ReportRecipeReceived()
+    {
         recipe = DataBase.instance.currentRecipe;
         ProcessRecipe();
     }
 
     Recipe recipe;
 
-    private void ProcessRecipe(){
-
+    private void ProcessRecipe()
+    {
         //Display all ingredients
-        foreach(var ingr in recipe.data.ingredients.Take(5)){
+        foreach (var ingr in recipe.data.ingredients.Take(5))
+        {
             GameObject ingredientGO = Instantiate(IngredientPrefab);
+
+            //Make up data
+            if (ingr.Cost == 0)
+                ingr.Cost = Random.Range(0.5f, 50f);
+
+            ingr.ScoreHealth = new string[] { "F", "E", "D", "C", "B", "A" }[Random.Range(0, 5)];
+            ingr.ScoreCarbon = new string[] { "F", "E", "D", "C", "B", "A" }[Random.Range(0, 5)];
+            
             ingredientGO.GetComponent<IngredientHandler>().SetIngredient(ingr);
             ingredientGO.transform.parent = IngredientsContainer.transform;
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System;
 
 public class IngredientHandler : MonoBehaviour
 {
@@ -12,30 +13,67 @@ public class IngredientHandler : MonoBehaviour
     public GameObject IconOn;
     public GameObject IconOff;
 
-    public void SetIngredient(Ingredient ingredient){
+    public void SetIngredient(Ingredient ingredient)
+    {
         textMeshPro.text = ingredient.name.singular;
         SetState(true);
-        SetGrade((int)(Time.realtimeSinceStartup*1000)%11);
+        SetGrade(ingredient.ScoreHealth, nrType.Health);
+        SetGrade(ingredient.ScoreCarbon, nrType.CarbonFootPrint);
+        SetCost(ingredient.Cost);
     }
 
     private Ingredient ingredient;
 
-    public void IngreadientCheckBoxClicked(){
+    public void IngreadientCheckBoxClicked()
+    {
         ingredient.IsActive = !ingredient.IsActive;
     }
 
-    public void SetState(bool state){
+    public void SetState(bool state)
+    {
     }
+
+
+    #region Scores
 
 
     public List<Material> materials;
-    public GameObject GradeBackground;
-    public TextMeshPro TextMeshHealthGrade;
+    public GameObject HealthinessBackground;
+    public TextMeshPro HealthinessText;
+
+    public GameObject CarbonfootprintBackground;
+    public TextMeshPro CarbonfootprintText;
+
+    enum nrType { Health, CarbonFootPrint }
+
     //Sets a grade between 0/10
-    private void SetGrade(int grade){
-        int index = (int)grade/2;
-        GradeBackground.GetComponent<MeshRenderer>().material = materials[index];
-        TextMeshHealthGrade.text = grade.ToString();
+    private void SetGrade(string grade, nrType type)
+    {
+        int index = Array.FindIndex(new string[] { "F", "E", "D", "C", "B", "A" }, x => x == grade);
+        Debug.Log("Found index " + index);
+        if (type == nrType.Health)
+        {
+            HealthinessBackground.GetComponent<MeshRenderer>().material = materials[index];
+            HealthinessText.text = grade.ToString();
+        }
+        else if (type == nrType.CarbonFootPrint)
+        {
+            CarbonfootprintBackground.GetComponent<MeshRenderer>().material = materials[index];
+            CarbonfootprintText.text = grade.ToString();
+        }
     }
 
+
+    #endregion
+
+    #region Cost
+
+    public TextMeshPro CostText;
+
+    private void SetCost(double cost){
+        string text = cost.ToString("C");
+        CostText.text = text;
+    }
+
+    #endregion
 }
