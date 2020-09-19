@@ -22,13 +22,17 @@ public class IngredientHandler : MonoBehaviour
         SetRating(ingredient.Rating);
         SetCost(ingredient.Cost);
         StartCoroutine(SetImage());
-        if(!String.IsNullOrEmpty(ingredient.brand)){
+        if (!String.IsNullOrEmpty(ingredient.brand))
+        {
             BrandRenderer.gameObject.SetActive(true);
             StartCoroutine(SetBrand());
         }
-        else{
+        else
+        {
             BrandRenderer.gameObject.SetActive(false);
         }
+
+        UpdateDetails();
     }
 
     private Ingredient ingredient;
@@ -37,10 +41,12 @@ public class IngredientHandler : MonoBehaviour
     {
         ingredient.IsActive = !ingredient.IsActive;
 
-        if(ingredient.IsActive){
+        if (ingredient.IsActive)
+        {
             CheckoutHandler.instance.AddItem(ingredient);
         }
-        else{
+        else
+        {
             CheckoutHandler.instance.RemoveItem(ingredient);
         }
     }
@@ -85,12 +91,15 @@ public class IngredientHandler : MonoBehaviour
 
     #region Starts
     public GameObject[] starsGO;
-    private void SetRating(int stars){
-        for(int i = 0; i < stars; i++){
+    private void SetRating(int stars)
+    {
+        for (int i = 0; i < stars; i++)
+        {
             starsGO[i].SetActive(true);
-            
+
         }
-        for(int i = stars; i < 5; i++){
+        for (int i = stars; i < 5; i++)
+        {
             starsGO[i].SetActive(false);
         }
     }
@@ -98,21 +107,24 @@ public class IngredientHandler : MonoBehaviour
 
     public MeshRenderer ImageRenderer;
 
-    IEnumerator SetImage(){
-        using (WWW www = new WWW(ingredient.url)){
+    IEnumerator SetImage()
+    {
+        using (WWW www = new WWW(ingredient.url))
+        {
             // Wait for download to complete
             yield return www;
 
-            float factor = (float)www.texture.width/www.texture.height;
+            float factor = (float)www.texture.width / www.texture.height;
             float factory = 1f;
-            
-            if(factor > 1){
-                factory = 1/factor;
+
+            if (factor > 1)
+            {
+                factory = 1 / factor;
                 factor = 1f;
             }
             ImageRenderer.gameObject.transform.localScale = new Vector3(
-                ImageRenderer.gameObject.transform.localScale.x * factor, 
-                ImageRenderer.gameObject.transform.localScale.y * factory, 
+                ImageRenderer.gameObject.transform.localScale.x * factor,
+                ImageRenderer.gameObject.transform.localScale.y * factory,
                 ImageRenderer.gameObject.transform.localScale.z);
             // assign texture
             ImageRenderer.material.mainTexture = www.texture;
@@ -121,24 +133,104 @@ public class IngredientHandler : MonoBehaviour
 
     public MeshRenderer BrandRenderer;
 
-    IEnumerator SetBrand(){
-        using (WWW www = new WWW(ingredient.brand)){
+    IEnumerator SetBrand()
+    {
+        using (WWW www = new WWW(ingredient.brand))
+        {
             // Wait for download to complete
             yield return www;
 
-            float factor = (float)www.texture.width/www.texture.height;
+            float factor = (float)www.texture.width / www.texture.height;
             float factory = 1f;
-            
-            if(factor > 1){
-                factory = 1/factor;
+
+            if (factor > 1)
+            {
+                factory = 1 / factor;
                 factor = 1f;
             }
             BrandRenderer.gameObject.transform.localScale = new Vector3(
-                BrandRenderer.gameObject.transform.localScale.x * factor, 
-                BrandRenderer.gameObject.transform.localScale.y * factory, 
+                BrandRenderer.gameObject.transform.localScale.x * factor,
+                BrandRenderer.gameObject.transform.localScale.y * factory,
                 BrandRenderer.gameObject.transform.localScale.z);
             // assign texture
             BrandRenderer.material.mainTexture = www.texture;
         }
     }
+
+
+    #region Details
+
+    private void UpdateDetails()
+    {
+        if (ingredient.nutrient_levels != null)
+        {
+            string nutr = "Nutrients:\n";
+            var n = ingredient.nutrient_levels;
+            if (n.fat == "low" || n.fat == "high")
+            {
+                nutr += $"- {n.fat} fat\n";
+            }
+            if (n.salt == "low" || n.salt == "high")
+            {
+                nutr += $"- {n.salt} salt\n";
+            }
+            if (n.saturated_fat == "low" || n.saturated_fat == "high")
+            {
+                nutr += $"- {n.saturated_fat} saturated fats\n";
+            }
+            if (n.sugars == "low" || n.sugars == "high")
+            {
+                nutr += $"- {n.sugars} sugar\n";
+            }
+            if (nutr != "Nutrients:\n")
+            {
+                NutrientData.text = nutr;
+            }
+            else
+            {
+                nutr += "All good :)'";
+                NutrientData.text = nutr;
+            }
+        }
+        if (ingredient.allergens.Count > 0)
+        {
+            string txt = "Allergens:\n";
+            for (int i = 0; i < ingredient.allergens.Count; i++)
+            {
+                Debug.Log(ingredient.allergens[i]);
+                txt += $" - {ingredient.allergens[i]}\n";
+            }
+            if (txt != "Allergens:\n")
+            {
+                MeshAllergenes.text = txt;
+            }
+            else
+            {
+                txt += "All good :)";
+                MeshAllergenes.text = txt;
+            }
+
+        }
+
+        SwissMadeIcon.SetActive(ingredient.origin == "Switzerland");
+        Mesh1.text = Math.Round(ingredient.weight, 2).ToString() + " kg";
+        Mesh2.text = ingredient.kcal + " kcal";
+    }
+
+    public GameObject DetailView;
+    private bool detailState = false;
+    public void BtnClicked()
+    {
+        detailState = !detailState;
+        DetailView.SetActive(detailState);
+    }
+
+    public TextMeshPro NutrientData;
+    public GameObject SwissMadeIcon;
+
+    public TextMeshPro Mesh1;
+    public TextMeshPro Mesh2;
+    public TextMeshPro MeshAllergenes;
+
+    #endregion
 }
