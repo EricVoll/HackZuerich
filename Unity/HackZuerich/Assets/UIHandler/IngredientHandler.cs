@@ -28,7 +28,13 @@ public class IngredientHandler : MonoBehaviour
     public void IngreadientCheckBoxClicked()
     {
         ingredient.IsActive = !ingredient.IsActive;
-        CheckoutHandler.instance.AddItem(ingredient);
+
+        if(ingredient.IsActive){
+            CheckoutHandler.instance.AddItem(ingredient);
+        }
+        else{
+            CheckoutHandler.instance.RemoveItem(ingredient);
+        }
     }
 
     public void SetState(bool state)

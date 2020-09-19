@@ -20,6 +20,11 @@ public class CheckoutHandler : MonoBehaviour
         UpdateUI();
     }
 
+    public void RemoveItem(Ingredient item){
+        cart.Items.Remove(item);
+        UpdateUI();
+    }
+
 
     #region price label
     public TextMeshPro CostLabel;
