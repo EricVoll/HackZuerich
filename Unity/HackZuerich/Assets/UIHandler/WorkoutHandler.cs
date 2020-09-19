@@ -16,12 +16,32 @@ public class WorkoutHandler : MonoBehaviour
 
     private void LaunchItems(){
         foreach(var ingredient in DataBase.instance.currentRecipe){
-            var item = Instantiate(WorkoutItemPrefab);
+            var item = GetModel(ingredient.name.singular);
             item.GetComponent<WorkoutItem>().Setup(ingredient);
             item.transform.parent = this.transform;
         }
 
         progressBarText.text = "Collected 0/" + maxNr;
+    }
+
+    private GameObject GetModel(string name){
+        Debug.Log(name + " requested");
+        if(map.Keys.Any(x => x.Contains(name.ToLower()))){
+            Debug.Log("returning special model");
+            //item exists. find it.
+            string[] key = map.Keys.First(x => x.Contains(name.ToLower()));
+            int kex = map[key];
+            Debug.Log("key returned: " + kex);
+            GameObject go = Instantiate(Models[kex]);
+            GameObject parent = Instantiate(WorkoutItemPrefab);
+            GameObject.Destroy(parent.GetComponent<MeshRenderer>());
+            go.transform.parent = parent.transform;
+            Debug.Log("-------------------------------------------------");
+            return parent;
+        }
+        else{
+            return Instantiate(WorkoutItemPrefab);
+        }
     }
 
     #region Collection
@@ -85,5 +105,23 @@ public class WorkoutHandler : MonoBehaviour
         FinishedScreen2.SetActive(false);
         FinishedScreen3.SetActive(true);
     }
+
+
+
+    
+    public GameObject[] Models;
+
+    public Dictionary<string[], int> map = new Dictionary<string[], int>(){
+        {new []{"paprika"}, 0},
+        {new []{"zwiebel"}, 1},
+        {new []{"tomaten"}, 2},
+        {new []{"salat", "zuckerhut"}, 3},
+        {new []{"reis"}, 4},
+        {new []{"fleisch", "wurst", "meat"}, 5},
+        {new []{"wein", "essig", "honig"}, 6},
+        {new []{"salz", "curry", "pfeffer"}, 7},
+        
+        };
+
 
 }

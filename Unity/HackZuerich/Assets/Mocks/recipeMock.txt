@@ -101,8 +101,8 @@
         "id": 17257,
         "synonyms": [],
         "name": {
-        "singular": "fl�ssiger Honig",
-        "plural": "fl�ssiger Honig"
+        "singular": "flüssiger Honig",
+        "plural": "flüssiger Honig"
         },
         "modified": "2019-09-30T17:09:50Z",
         "family_ids": [

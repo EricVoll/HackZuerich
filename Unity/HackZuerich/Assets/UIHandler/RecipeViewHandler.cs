@@ -38,7 +38,7 @@ public class RecipeViewHandler : MonoBehaviour
     private void ProcessRecipe()
     {
         //Display all ingredients
-        foreach (var ingr in ingredients.Take(5))
+        foreach (var ingr in ingredients.Skip(2).Take(5))
         {
             GameObject ingredientGO = Instantiate(IngredientPrefab);
 
