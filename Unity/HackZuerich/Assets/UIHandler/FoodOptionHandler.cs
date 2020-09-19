@@ -15,18 +15,37 @@ public class FoodOptionHandler : MonoBehaviour
         ReportPressed = Callback;
         this.option = option;
 
-        if(meshRenderer ==  null){
+        if (meshRenderer == null)
+        {
             Debug.LogError("MeshRenderer is null!");
         }
-
+/*
         meshRenderer.material = new Material(Shader.Find("Standard"));
         var texture = option.GetTexture();
         meshRenderer.material.SetTexture("_MainTex", texture);
+  
+  */
+
+        StartCoroutine(SetImage());
     }
 
 
+    IEnumerator SetImage()
+    {
+        // Start a download of the given URL
+        using (WWW www = new WWW(option.url))
+        {
+            // Wait for download to complete
+            yield return www;
 
-    public void BtnPressed(){
+            // assign texture
+            meshRenderer.material.mainTexture = www.texture;
+        }
+
+    }
+
+    public void BtnPressed()
+    {
         ReportPressed?.Invoke(option.id);
     }
 
