@@ -18,8 +18,8 @@ public class IngredientHandler : MonoBehaviour
         this.ingredient = ingredient;
         textMeshPro.text = ingredient.name.singular;
         SetState(true);
-        SetGrade(ingredient.ScoreHealth, nrType.Health);
-        SetGrade(ingredient.ScoreCarbon, nrType.CarbonFootPrint);
+        SetGrade(ingredient.ScoreHealth);
+        SetRating(ingredient.Rating);
         SetCost(ingredient.Cost);
     }
 
@@ -43,26 +43,15 @@ public class IngredientHandler : MonoBehaviour
     public GameObject HealthinessBackground;
     public TextMeshPro HealthinessText;
 
-    public GameObject CarbonfootprintBackground;
-    public TextMeshPro CarbonfootprintText;
 
-    enum nrType { Health, CarbonFootPrint }
 
     //Sets a grade between 0/10
-    private void SetGrade(string grade, nrType type)
+    private void SetGrade(string grade)
     {
         int index = Array.FindIndex(new string[] { "F", "E", "D", "C", "B", "A" }, x => x == grade);
         Debug.Log("Found index " + index);
-        if (type == nrType.Health)
-        {
-            HealthinessBackground.GetComponent<MeshRenderer>().material = materials[index];
-            HealthinessText.text = grade.ToString();
-        }
-        else if (type == nrType.CarbonFootPrint)
-        {
-            CarbonfootprintBackground.GetComponent<MeshRenderer>().material = materials[index];
-            CarbonfootprintText.text = grade.ToString();
-        }
+        HealthinessBackground.GetComponent<MeshRenderer>().material = materials[index];
+        HealthinessText.text = grade.ToString();
     }
 
 
@@ -72,10 +61,24 @@ public class IngredientHandler : MonoBehaviour
 
     public TextMeshPro CostText;
 
-    private void SetCost(double cost){
+    private void SetCost(double cost)
+    {
         string text = cost.ToString("C");
         CostText.text = text;
     }
 
+    #endregion
+
+    #region Starts
+    public GameObject[] starsGO;
+    private void SetRating(int stars){
+        for(int i = 0; i < stars; i++){
+            starsGO[i].SetActive(true);
+            
+        }
+        for(int i = stars; i < 5; i++){
+            starsGO[i].SetActive(false);
+        }
+    }
     #endregion
 }

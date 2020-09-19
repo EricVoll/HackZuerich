@@ -41,7 +41,7 @@ public class Ingredient
     public bool IsActive {get; set;}
     public double Cost {get;set;}
     public string ScoreHealth {get;set;}
-    public string ScoreCarbon {get;set;}
+    public int Rating {get;set;}
 }
 
 public class Tag
