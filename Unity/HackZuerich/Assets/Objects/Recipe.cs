@@ -24,6 +24,7 @@ public class Ingredient
     public string ScoreHealth {get;set;}
     public int Rating {get;set;}
     public int kcal {get;set;}
+    public string url {get;set;} = "https://image.migros.ch/product-zoom/9786a41d74c57f9cd4493cf19d662948be7a48fb/bio-milch-past.jpg";
 }
 
 

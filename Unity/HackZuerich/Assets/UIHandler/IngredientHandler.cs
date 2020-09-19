@@ -21,6 +21,10 @@ public class IngredientHandler : MonoBehaviour
         SetGrade(ingredient.ScoreHealth);
         SetRating(ingredient.Rating);
         SetCost(ingredient.Cost);
+        StartCoroutine(SetImage());
+
+        SetBio(true);
+        SetSwissNet(false);
     }
 
     private Ingredient ingredient;
@@ -87,4 +91,31 @@ public class IngredientHandler : MonoBehaviour
         }
     }
     #endregion
+
+    public MeshRenderer ImageRenderer;
+
+    IEnumerator SetImage(){
+        using (WWW www = new WWW(ingredient.url)){
+            // Wait for download to complete
+            yield return www;
+
+            float factor = (float)www.texture.width/www.texture.height;
+            Debug.Log(factor);
+            ImageRenderer.gameObject.transform.localScale = new Vector3(
+                ImageRenderer.gameObject.transform.localScale.x * factor, 
+                ImageRenderer.gameObject.transform.localScale.y, 
+                ImageRenderer.gameObject.transform.localScale.z);
+            // assign texture
+            ImageRenderer.material.mainTexture = www.texture;
+        }
+    }
+
+    public GameObject BioIcon;
+    public GameObject SwissNessIcon;
+    private void SetBio(bool state){
+        BioIcon.SetActive(state);
+    }
+    private void SetSwissNet(bool state){
+        SwissNessIcon.SetActive(state);
+    }
 }
