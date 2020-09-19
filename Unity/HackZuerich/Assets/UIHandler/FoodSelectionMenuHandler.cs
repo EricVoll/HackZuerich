@@ -32,7 +32,7 @@ public class FoodSelectionMenuHandler : MonoBehaviour
     private void ReportButtonPressed(string optionId)
     {
         DataBase.instance.ReportFoodSelection(optionId);
-        this.GetComponent<StoryLineStep>().ReportStepFinished(new[] { 1, 2 });
+        this.GetComponent<StoryLineStep>().ReportStepFinished(new[] { 1 });
     }
 
     public List<FoodOption> Options = new List<FoodOption>();

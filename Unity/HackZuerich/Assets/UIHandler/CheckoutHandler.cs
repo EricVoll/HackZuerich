@@ -39,7 +39,7 @@ public class CheckoutHandler : MonoBehaviour
     public void ReportCheckoutBtnClicked()
     {
         Debug.Log("clicked me");
-        this.GetComponent<StoryLineStep>().ReportStepFinished(new int[] { 3 });
+        this.GetComponent<StoryLineStep>().ReportStepFinished(new int[] { 4 });
     }
 
     #endregion
