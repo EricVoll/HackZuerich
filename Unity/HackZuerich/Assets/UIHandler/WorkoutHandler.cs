@@ -120,6 +120,8 @@ public class WorkoutHandler : MonoBehaviour
         {new []{"fleisch", "wurst", "meat"}, 5},
         {new []{"wein", "essig", "honig"}, 6},
         {new []{"salz", "curry", "pfeffer"}, 7},
+        {new []{"kaese", "käse"}, 8},
+        {new []{"blume"}, 9},
         
         };
 
