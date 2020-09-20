@@ -4,6 +4,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
 using System;
+using UnityEngine.Networking;
 
 public class DataBase : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class DataBase : MonoBehaviour
         instance = this;
 
         //test purpose
-        currentRecipe = MockRecipeImport();
         Debug.Log("instance currentRecipe");
     }
 
@@ -24,18 +24,79 @@ public class DataBase : MonoBehaviour
     public System.Action InitRecipeReceived;
 
 
-
+    private string id;
     public void ReportFoodSelection(string id)
     {
-        Debug.Log("Requesting item");
-        initRecipe = MockInitRecipe();
-        RecipeReceived?.Invoke();
+        this.id = id;
+        Debug.Log("Requesting for id " + id);
+        var com = new RestCommunicator();
+        StartCoroutine(GetInitRecipe("https://mrshopper.azurewebsites.net/get_recipe?recipe_id=" + id));
+
+        //Debug.Log("Requesting item");
+        //initRecipe = MockInitRecipe();
+        //RecipeReceived?.Invoke();
     }
+
+    private IEnumerator GetInitRecipe(string url)
+    {
+        Debug.Log("Sending to " + url);
+
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError)
+            {
+                Debug.LogError(www.error);
+            }
+            else
+            {
+                if (www.isDone)
+                {
+                    string jsonResult = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
+
+                    initRecipe = JsonConvert.DeserializeObject<InitRecipe>(jsonResult);
+
+                    InitRecipeReceived?.Invoke();
+                    Debug.Log(jsonResult);
+                }
+            }
+        }
+    }
+
+    private IEnumerator GetIngredients(string url)
+    {
+        Debug.Log("Sending to " + url);
+
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError)
+            {
+                Debug.LogError(www.error);
+            }
+            else
+            {
+                if (www.isDone)
+                {
+                    string jsonResult = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
+
+                    currentRecipe = JsonConvert.DeserializeObject<List<Ingredient>>(jsonResult);
+
+                    RecipeReceived?.Invoke();
+                    Debug.Log(jsonResult);
+                }
+            }
+        }
+    }
+
 
     public void ReportRecipeAproval()
     {
-        currentRecipe = MockRecipeImport();
-        RecipeReceived?.Invoke();
+        StartCoroutine(GetIngredients("https://mrshopper.azurewebsites.net/get_ingredients?recipe_id="+this.id));
+        //currentRecipe = MockRecipeImport();
+        //RecipeReceived?.Invoke();
     }
 
 
@@ -53,6 +114,7 @@ public class DataBase : MonoBehaviour
 
     private InitRecipe MockInitRecipe()
     {
+
         string json = initRecipeMockTextFile.text;
         InitRecipe r = JsonConvert.DeserializeObject<InitRecipe>(json);
         return r;
