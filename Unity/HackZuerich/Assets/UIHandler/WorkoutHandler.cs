@@ -104,6 +104,8 @@ public class WorkoutHandler : MonoBehaviour
         yield return new WaitForSeconds(8);
         FinishedScreen2.SetActive(false);
         FinishedScreen3.SetActive(true);
+        yield return new WaitForSeconds(8);
+        this.GetComponent<StoryLineStep>().ReportStepFinished(new int[]{5});
     }
 
 
