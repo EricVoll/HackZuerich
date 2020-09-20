@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
+using System;
 
 public class DataBase : MonoBehaviour
 {
@@ -65,4 +66,32 @@ public class DataBase : MonoBehaviour
     //Mocks
     public TextAsset recipeMockTextFile;
     public TextAsset initRecipeMockTextFile;
+
+    public void GetReplacements(string ingredientId, Action<List<Ingredient>> Callback)
+    {
+        var list = new List<Ingredient>(){
+                new Ingredient(){
+                    Rating = 4,
+                    name = "Test Replacement 1",
+                    Cost = 12,
+                    ScoreHealth = "A",
+                    url = "https://image.migros.ch/original/5e6d8d8a9f2f12880b3d5f1f7ba8606cd14db6a4/agnesi-pesto-alla-genovese.png"
+                },new Ingredient(){
+                    Rating = 4,
+                    name = "Test Replacement 2",
+                    Cost = 5,
+                    ScoreHealth = "V",
+                    url = "https://image.migros.ch/original/5e6d8d8a9f2f12880b3d5f1f7ba8606cd14db6a4/agnesi-pesto-alla-genovese.png"
+                },new Ingredient(){
+                    Rating = 2,
+                    name = "Test Replacement 3",
+                    Cost = 100,
+                    ScoreHealth = "C",
+                    url = "https://image.migros.ch/original/5e6d8d8a9f2f12880b3d5f1f7ba8606cd14db6a4/agnesi-pesto-alla-genovese.png"
+                }
+            };
+        Callback(list);
+    }
+
+
 }

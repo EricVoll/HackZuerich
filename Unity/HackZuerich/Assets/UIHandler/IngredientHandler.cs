@@ -223,6 +223,10 @@ public class IngredientHandler : MonoBehaviour
     {
         detailState = !detailState;
         DetailView.SetActive(detailState);
+
+        if(detailState == true){
+            DataBase.instance.GetReplacements(ingredient.id, Callback);
+        }
     }
 
     public TextMeshPro NutrientData;
@@ -231,6 +235,35 @@ public class IngredientHandler : MonoBehaviour
     public TextMeshPro Mesh1;
     public TextMeshPro Mesh2;
     public TextMeshPro MeshAllergenes;
+
+    #endregion
+
+    #region Replacements
+
+    List<Ingredient> replacements;
+
+    public void Opt1(){
+        if(replacements == null || replacements.Count == 0){
+            return;
+        }
+        SetIngredient(replacements[0]);
+    }
+    public void Opt2(){
+        if(replacements == null || replacements.Count == 0){
+            return;
+        }
+        SetIngredient(replacements[1]);
+    }
+    public void Opt3(){
+        if(replacements == null || replacements.Count == 0){
+            return;
+        }
+        SetIngredient(replacements[2]);
+    }
+
+    void Callback(List<Ingredient> list){
+        replacements = list;
+    }
 
     #endregion
 }
