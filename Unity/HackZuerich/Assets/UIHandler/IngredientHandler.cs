@@ -185,11 +185,11 @@ public class IngredientHandler : MonoBehaviour
             if (nutr != "Nutrients:\n")
             {
                 NutrientData.text = nutr;
+                CheckMarkNutr.SetActive(false);
             }
             else
             {
-                nutr += "All good :)'";
-                NutrientData.text = nutr;
+                CheckMarkNutr.SetActive(true);
             }
         }
         if (ingredient.allergens.Count > 0)
@@ -203,10 +203,11 @@ public class IngredientHandler : MonoBehaviour
             if (txt != "Allergens:\n")
             {
                 MeshAllergenes.text = txt;
+                CheckMarkAlg.SetActive(false);
             }
             else
             {
-                txt += "All good :)";
+                CheckMarkAlg.SetActive(true);
                 MeshAllergenes.text = txt;
             }
 
@@ -225,9 +226,12 @@ public class IngredientHandler : MonoBehaviour
         DetailView.SetActive(detailState);
 
         if(detailState == true){
-            DataBase.instance.GetReplacements(ingredient.id, Callback);
+            DataBase.instance.GetReplacements(ingredient.ingredient_id.ToString(), Callback);
         }
     }
+
+    public GameObject CheckMarkNutr;
+    public GameObject CheckMarkAlg;
 
     public TextMeshPro NutrientData;
     public GameObject SwissMadeIcon;
