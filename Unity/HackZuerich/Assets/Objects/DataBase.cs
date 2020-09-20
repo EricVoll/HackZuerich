@@ -91,10 +91,44 @@ public class DataBase : MonoBehaviour
         }
     }
 
+    private IEnumerator GetSubstitute(string url)
+    {
+        Debug.Log("Sending to " + url);
+
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError)
+            {
+                Debug.LogError(www.error);
+            }
+            else
+            {
+                if (www.isDone)
+                {
+                    string jsonResult = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
+
+                    Debug.Log(jsonResult);
+                    var list = JsonConvert.DeserializeObject<Substitute>(jsonResult);
+
+                    List<Ingredient> ingredients = new List<Ingredient>(){
+                        list.cheapest,
+                        list.personal_best,
+                        list.best_grade
+                    };
+
+                    SubstituteCallBack(ingredients);
+                }
+            }
+        }
+    }
+
+
 
     public void ReportRecipeAproval()
     {
-        StartCoroutine(GetIngredients("https://mrshopper.azurewebsites.net/get_ingredients?recipe_id="+this.id));
+        StartCoroutine(GetIngredients("https://mrshopper.azurewebsites.net/get_ingredients?recipe_id=" + this.id));
         //currentRecipe = MockRecipeImport();
         //RecipeReceived?.Invoke();
     }
@@ -129,9 +163,12 @@ public class DataBase : MonoBehaviour
     public TextAsset recipeMockTextFile;
     public TextAsset initRecipeMockTextFile;
 
+    Action<List<Ingredient>> SubstituteCallBack;
     public void GetReplacements(string ingredientId, Action<List<Ingredient>> Callback)
     {
-        var list = new List<Ingredient>(){
+        SubstituteCallBack = Callback;
+        StartCoroutine(GetSubstitute("https://mrshopper.azurewebsites.net/get_substitute?ingredient_id=" + ingredientId));
+        /*var list = new List<Ingredient>(){
                 new Ingredient(){
                     Rating = 4,
                     name = "Test Replacement 1",
@@ -152,8 +189,16 @@ public class DataBase : MonoBehaviour
                     url = "https://image.migros.ch/original/5e6d8d8a9f2f12880b3d5f1f7ba8606cd14db6a4/agnesi-pesto-alla-genovese.png"
                 }
             };
-        Callback(list);
+        Callback(list);*/
     }
 
+
+}
+
+class Substitute
+{
+    public Ingredient cheapest { get; set; }
+    public Ingredient best_grade { get; set; }
+    public Ingredient personal_best { get; set; }
 
 }
