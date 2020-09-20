@@ -1,0 +1,195 @@
+
+{
+    "language": "de",
+    "title": "Schoggitarte mit Erdbeeren",
+    "duration": 180,
+    "nutrients": {
+        "calories": 520,
+        "carbohydrates": 45,
+        "carbohydrates_percent": 35,
+        "fat": 34,
+        "fat_percent": 59.5,
+        "kilojoule": 2150,
+        "proteins": 7,
+        "proteins_percent": 5.4
+    },
+    "steps": [
+        "F\u00fcr den Kakaoteig Mehl, Salz, Kakaopulver und Rohrzucker in einer Sch\u00fcssel mischen. Butter in Flocken dazuschneiden. Alles zwischen den H\u00e4nden br\u00f6smelig reiben. Ei dazugeben. Alles rasch zu einem Teig zusammenf\u00fcgen. Teig in Klarsichtfolie verpackt mindestens 30 Minuten k\u00fchl stellen.",
+        "Backofen auf 180 \u00b0C vorheizen. Kuchenblech ausbuttern und mit Mehl best\u00e4uben. Teig auf wenig Mehl ca. 3 mm d\u00fcnn auswallen. Teig in das Blech legen. Teigboden mit einer Gabel dicht einstechen. Mit einem St\u00fcck Backpapier belegen und mit H\u00fclsenfr\u00fcchten beschweren. In der Ofenmitte ca. 15 Minuten blindbacken. Papier samt H\u00fclsenfr\u00fcchten entfernen. Boden weitere 5 Minuten fertig backen. Herausnehmen, ausk\u00fchlen lassen.",
+        "Schokolade und Butter im Wasserbad langsam schmelzen. Cr\u00e8me fra\u00eeche l\u00f6ffelweise mit dem Schwingbesen darunterr\u00fchren, salzen. Masse auf dem gut ausgek\u00fchlten Tarteboden verteilen. Ca. 10 Minuten k\u00fchl stellen. Erdbeeren achteln und mit der Schnittfl\u00e4che nach unten kreisf\u00f6rmig auf der Schokoladenmasse verteilen. Gelee erw\u00e4rmen, Erdbeeren damit bepinseln. Tarte ca. 1 Stunde k\u00fchl stellen."
+    ],
+    "ingredients": [
+        {
+            "id": 14483,
+            "synonyms": [],
+            "name": {
+                "singular": "Erdbeere",
+                "plural": "Erdbeeren"
+            },
+            "modified": "2019-09-30T16:50:03Z",
+            "family_ids": [
+                14055528,
+                14055423,
+                14648563
+            ]
+        },
+        {
+            "id": 14708,
+            "synonyms": [],
+            "name": {
+                "singular": "Kakaopulver",
+                "plural": "Kakaopulver"
+            },
+            "modified": "2019-10-01T09:17:03Z",
+            "family_ids": []
+        },
+        {
+            "id": 16851,
+            "synonyms": [],
+            "name": {
+                "singular": "Butter und Mehl",
+                "plural": "Butter und Mehl"
+            },
+            "modified": "2019-09-30T16:15:04Z",
+            "family_ids": []
+        },
+        {
+            "id": 16850,
+            "synonyms": [
+                "Anke"
+            ],
+            "name": {
+                "singular": "Butter",
+                "plural": "Butter"
+            },
+            "modified": "2019-09-30T16:10:55Z",
+            "family_ids": [
+                14055468
+            ]
+        },
+        {
+            "id": 16865,
+            "synonyms": [
+                "Creme fraiche",
+                "Sauerrahm",
+                "saurer Rahm",
+                "saure Sahne",
+                "saurer Halbrahm"
+            ],
+            "name": {
+                "singular": "Cr\u00e8me fra\u00eeche",
+                "plural": "Cr\u00e8me fra\u00eeche"
+            },
+            "modified": "2019-09-30T16:29:34Z",
+            "family_ids": [
+                14055971,
+                14055498
+            ]
+        },
+        {
+            "id": 14927,
+            "synonyms": [],
+            "name": {
+                "singular": "Erdbeerguss f\u00fcr Torten",
+                "plural": "Erdbeerguss f\u00fcr Torten"
+            },
+            "modified": "2019-09-30T16:50:28Z",
+            "family_ids": []
+        },
+        {
+            "id": 15084,
+            "synonyms": [],
+            "name": {
+                "singular": "Ei",
+                "plural": "Eier"
+            },
+            "modified": "2019-09-30T16:39:55Z",
+            "family_ids": [
+                14055516
+            ]
+        },
+        {
+            "id": 16462,
+            "synonyms": [
+                "Salzkristallflocken",
+                "Flor de sal",
+                "Salzblume"
+            ],
+            "name": {
+                "singular": "Fleur de sel",
+                "plural": "Fleur de sel"
+            },
+            "modified": "2020-06-19T08:35:50Z",
+            "family_ids": [
+                14055959
+            ]
+        },
+        {
+            "id": 16379,
+            "synonyms": [],
+            "name": {
+                "singular": "Mehl",
+                "plural": "Mehl"
+            },
+            "modified": "2019-10-01T12:25:50Z",
+            "family_ids": [
+                14055801
+            ]
+        },
+        {
+            "id": 16596,
+            "synonyms": [
+                "Backbohnen"
+            ],
+            "name": {
+                "singular": "H\u00fclsenfr\u00fcchte zum Blindbacken",
+                "plural": "H\u00fclsenfr\u00fcchte zum Blindbacken"
+            },
+            "modified": "2019-10-01T09:03:00Z",
+            "family_ids": []
+        },
+        {
+            "id": 16546,
+            "synonyms": [
+                "Kochsalz",
+                "Speisesalz"
+            ],
+            "name": {
+                "singular": "Salz",
+                "plural": "Salz"
+            },
+            "modified": "2019-10-04T09:00:38Z",
+            "family_ids": [
+                14055959
+            ]
+        },
+        {
+            "id": 17185,
+            "synonyms": [
+                "dunkle Schoggi"
+            ],
+            "name": {
+                "singular": "dunkle Schokolade",
+                "plural": "dunkle Schokolade"
+            },
+            "modified": "2019-09-30T16:34:51Z",
+            "family_ids": [
+                14055511,
+                14055988
+            ]
+        },
+        {
+            "id": 17274,
+            "synonyms": [],
+            "name": {
+                "singular": "Rohrzucker",
+                "plural": "Rohrzucker"
+            },
+            "modified": "2019-10-02T13:31:30Z",
+            "family_ids": [
+                14056121
+            ]
+        }
+    ],
+    "image": "https://recipeimages.migros.ch/large/e30e0f638cee5bc9cedc71aa05dc75637692a866/schoggitarte-mit-erdbeeren-0-4-3.jpg"
+}
