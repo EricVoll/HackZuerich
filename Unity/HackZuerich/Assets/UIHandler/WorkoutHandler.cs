@@ -11,11 +11,13 @@ public class WorkoutHandler : MonoBehaviour
     {
         LaunchItems();
     }
-    
+
     public GameObject WorkoutItemPrefab;
 
-    private void LaunchItems(){
-        foreach(var ingredient in DataBase.instance.currentRecipe){
+    private void LaunchItems()
+    {
+        foreach (var ingredient in DataBase.instance.currentRecipe)
+        {
             var item = GetModel(ingredient.name);
             item.GetComponent<WorkoutItem>().Setup(ingredient);
             item.transform.parent = this.transform;
@@ -24,12 +26,14 @@ public class WorkoutHandler : MonoBehaviour
         progressBarText.text = "Collected 0/" + maxNr;
     }
 
-    private GameObject GetModel(string name){
+    private GameObject GetModel(string name)
+    {
         Debug.Log(name + " requested");
-        if(map.Keys.Any(x => x.Contains(name.ToLower()))){
+        if (map.Keys.Any(x => x.Any(y => name.ToLower().Contains(y))))
+        {
             Debug.Log("returning special model");
             //item exists. find it.
-            string[] key = map.Keys.First(x => x.Contains(name.ToLower()));
+            string[] key = map.Keys.First(x => x.Any(y => name.ToLower().Contains(y)));
             int kex = map[key];
             Debug.Log("key returned: " + kex);
             GameObject go = Instantiate(Models[kex]);
@@ -39,7 +43,8 @@ public class WorkoutHandler : MonoBehaviour
             Debug.Log("-------------------------------------------------");
             return parent;
         }
-        else{
+        else
+        {
             return Instantiate(WorkoutItemPrefab);
         }
     }
@@ -51,8 +56,10 @@ public class WorkoutHandler : MonoBehaviour
     public int maxNr = 5;
     List<Ingredient> collectedIngredients = new List<Ingredient>();
 
-    public void ReportIngredientCollected(Ingredient ingredient){
-        if(collectedIngredients.Any(x => x.name == ingredient.name)){
+    public void ReportIngredientCollected(Ingredient ingredient)
+    {
+        if (collectedIngredients.Any(x => x.name == ingredient.name))
+        {
             return;
         }
 
@@ -62,19 +69,23 @@ public class WorkoutHandler : MonoBehaviour
         Vector3 scale = progressBar.localScale;
         scale.x = (float)collectedIngredients.Count / maxNr;
         progressBar.localScale = scale;
-        progressBarText.text = $"Collected {collectedIngredients.Count}/{maxNr} \n+ {collectedIngredients.Count*10} Cumulus Points extra!";
+        progressBarText.text = $"Collected {collectedIngredients.Count}/{maxNr} \n+ {collectedIngredients.Count * 10} Cumulus Points extra!";
 
-        if(collectedIngredients.Count == 1){
+        if (collectedIngredients.Count == 1)
+        {
             motivatorText.text = "The best things in life are actually really expensive.";
         }
-        else if(collectedIngredients.Count == 2){
+        else if (collectedIngredients.Count == 2)
+        {
             motivatorText.text = "You can do it!";
         }
-        else if(collectedIngredients.Count == 3){
+        else if (collectedIngredients.Count == 3)
+        {
             motivatorText.text = "If at first you don’t succeed, then skydiving definitely isn’t for you.";
         }
 
-        if(collectedIngredients.Count == maxNr){
+        if (collectedIngredients.Count == maxNr)
+        {
             ReportFinished();
         }
     }
@@ -89,15 +100,17 @@ public class WorkoutHandler : MonoBehaviour
     public GameObject FinishedScreen2;
     public GameObject FinishedScreen3;
 
-    
-    private void ReportFinished(){
+
+    private void ReportFinished()
+    {
         ProfileScripts.instance.AddCal(collectedIngredients.Sum(x => x.kcal));
         FinishedScreen1.SetActive(true);
 
         StartCoroutine(Waiter());
     }
 
-    IEnumerator Waiter(){
+    IEnumerator Waiter()
+    {
         yield return new WaitForSeconds(6);
         FinishedScreen1.SetActive(false);
         FinishedScreen2.SetActive(true);
@@ -105,26 +118,26 @@ public class WorkoutHandler : MonoBehaviour
         FinishedScreen2.SetActive(false);
         FinishedScreen3.SetActive(true);
         yield return new WaitForSeconds(8);
-        this.GetComponent<StoryLineStep>().ReportStepFinished(new int[]{5});
+        this.GetComponent<StoryLineStep>().ReportStepFinished(new int[] { 5 });
     }
 
 
 
-    
+
     public GameObject[] Models;
 
     public Dictionary<string[], int> map = new Dictionary<string[], int>(){
         {new []{"paprika"}, 0},
-        {new []{"zwiebel"}, 1},
+        {new []{"zwiebel", "zwiebeln"}, 1},
         {new []{"tomaten"}, 2},
         {new []{"salat", "zuckerhut"}, 3},
         {new []{"reis"}, 4},
         {new []{"fleisch", "wurst", "meat"}, 5},
         {new []{"wein", "essig", "honig"}, 6},
         {new []{"salz", "curry", "pfeffer"}, 7},
-        {new []{"kaese", "käse"}, 8},
+        {new []{"kaese", "käse", "mozzarella"}, 8},
         {new []{"blume"}, 9},
-        
+
         };
 
 
