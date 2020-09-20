@@ -137,7 +137,7 @@ public class WorkoutHandler : MonoBehaviour
         {new []{"salz", "curry", "pfeffer"}, 7},
         {new []{"kaese", "käse", "mozzarella"}, 8},
         {new []{"blume"}, 9},
-        {new []{"zucchetti", "zucchini"}, 9},
+        {new []{"zucchetti", "zucchini"}, 10},
 
         };
 
